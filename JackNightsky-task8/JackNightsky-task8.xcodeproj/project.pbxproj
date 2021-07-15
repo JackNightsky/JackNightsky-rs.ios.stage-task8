@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
+		04BD63CB26A0D3D30027BD94 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */; };
+		04BD63CE26A0D3D30027BD94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* ViewController.m */; };
+		04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63CF26A0D3D30027BD94 /* Main.storyboard */; };
+		04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D226A0D3D30027BD94 /* Assets.xcassets */; };
+		04BD63D626A0D3D30027BD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */; };
+		04BD63D926A0D3D30027BD94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63D826A0D3D30027BD94 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JackNightsky-task8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BD63C626A0D3D30027BD94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04BD63C726A0D3D30027BD94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04BD63C926A0D3D30027BD94 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		04BD63CC26A0D3D30027BD94 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04BD63CD26A0D3D30027BD94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04BD63D026A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04BD63D226A0D3D30027BD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04BD63D526A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04BD63D726A0D3D30027BD94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BD63D826A0D3D30027BD94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04BD63C026A0D3D20027BD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04BD63BA26A0D3D20027BD94 = {
+			isa = PBXGroup;
+			children = (
+				04BD63C526A0D3D20027BD94 /* JackNightsky-task8 */,
+				04BD63C426A0D3D20027BD94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04BD63C426A0D3D20027BD94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04BD63C526A0D3D20027BD94 /* JackNightsky-task8 */ = {
+			isa = PBXGroup;
+			children = (
+				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
+				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
+				04BD63C926A0D3D30027BD94 /* SceneDelegate.h */,
+				04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */,
+				04BD63CC26A0D3D30027BD94 /* ViewController.h */,
+				04BD63CD26A0D3D30027BD94 /* ViewController.m */,
+				04BD63CF26A0D3D30027BD94 /* Main.storyboard */,
+				04BD63D226A0D3D30027BD94 /* Assets.xcassets */,
+				04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */,
+				04BD63D726A0D3D30027BD94 /* Info.plist */,
+				04BD63D826A0D3D30027BD94 /* main.m */,
+			);
+			path = "JackNightsky-task8";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04BD63C226A0D3D20027BD94 /* JackNightsky-task8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BD63DC26A0D3D30027BD94 /* Build configuration list for PBXNativeTarget "JackNightsky-task8" */;
+			buildPhases = (
+				04BD63BF26A0D3D20027BD94 /* Sources */,
+				04BD63C026A0D3D20027BD94 /* Frameworks */,
+				04BD63C126A0D3D20027BD94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JackNightsky-task8";
+			productName = "JackNightsky-task8";
+			productReference = 04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04BD63BB26A0D3D20027BD94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					04BD63C226A0D3D20027BD94 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 04BD63BE26A0D3D20027BD94 /* Build configuration list for PBXProject "JackNightsky-task8" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04BD63BA26A0D3D20027BD94;
+			productRefGroup = 04BD63C426A0D3D20027BD94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04BD63C226A0D3D20027BD94 /* JackNightsky-task8 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04BD63C126A0D3D20027BD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BD63D626A0D3D30027BD94 /* LaunchScreen.storyboard in Resources */,
+				04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */,
+				04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04BD63BF26A0D3D20027BD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BD63CE26A0D3D30027BD94 /* ViewController.m in Sources */,
+				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
+				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
+				04BD63CB26A0D3D30027BD94 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04BD63CF26A0D3D30027BD94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04BD63D026A0D3D30027BD94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04BD63D526A0D3D30027BD94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04BD63DA26A0D3D30027BD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04BD63DB26A0D3D30027BD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04BD63DD26A0D3D30027BD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6TCBC57H7;
+				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04BD63DE26A0D3D30027BD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6TCBC57H7;
+				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04BD63BE26A0D3D20027BD94 /* Build configuration list for PBXProject "JackNightsky-task8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BD63DA26A0D3D30027BD94 /* Debug */,
+				04BD63DB26A0D3D30027BD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BD63DC26A0D3D30027BD94 /* Build configuration list for PBXNativeTarget "JackNightsky-task8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BD63DD26A0D3D30027BD94 /* Debug */,
+				04BD63DE26A0D3D30027BD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04BD63BB26A0D3D20027BD94 /* Project object */;
+}
