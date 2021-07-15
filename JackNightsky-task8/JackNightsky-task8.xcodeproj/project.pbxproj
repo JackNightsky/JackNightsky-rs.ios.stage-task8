@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
-		04BD63CB26A0D3D30027BD94 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */; };
-		04BD63CE26A0D3D30027BD94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* ViewController.m */; };
+		04BD63CE26A0D3D30027BD94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* MainViewController.m */; };
 		04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63CF26A0D3D30027BD94 /* Main.storyboard */; };
 		04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D226A0D3D30027BD94 /* Assets.xcassets */; };
 		04BD63D626A0D3D30027BD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */; };
@@ -20,10 +19,8 @@
 		04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JackNightsky-task8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD63C626A0D3D30027BD94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD63C726A0D3D30027BD94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04BD63C926A0D3D30027BD94 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		04BD63CC26A0D3D30027BD94 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04BD63CD26A0D3D30027BD94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04BD63CC26A0D3D30027BD94 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		04BD63CD26A0D3D30027BD94 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		04BD63D026A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BD63D226A0D3D30027BD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BD63D526A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,10 +60,8 @@
 			children = (
 				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
-				04BD63C926A0D3D30027BD94 /* SceneDelegate.h */,
-				04BD63CA26A0D3D30027BD94 /* SceneDelegate.m */,
-				04BD63CC26A0D3D30027BD94 /* ViewController.h */,
-				04BD63CD26A0D3D30027BD94 /* ViewController.m */,
+				04BD63CC26A0D3D30027BD94 /* MainViewController.h */,
+				04BD63CD26A0D3D30027BD94 /* MainViewController.m */,
 				04BD63CF26A0D3D30027BD94 /* Main.storyboard */,
 				04BD63D226A0D3D30027BD94 /* Assets.xcassets */,
 				04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */,
@@ -145,10 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BD63CE26A0D3D30027BD94 /* ViewController.m in Sources */,
+				04BD63CE26A0D3D30027BD94 /* MainViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
-				04BD63CB26A0D3D30027BD94 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,13 +288,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6TCBC57H7;
 				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,13 +308,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6TCBC57H7;
 				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
