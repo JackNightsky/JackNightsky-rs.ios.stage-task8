@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
-		04BD63CE26A0D3D30027BD94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* MainViewController.m */; };
+		04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */; };
 		04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63CF26A0D3D30027BD94 /* Main.storyboard */; };
 		04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D226A0D3D30027BD94 /* Assets.xcassets */; };
 		04BD63D626A0D3D30027BD94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */; };
@@ -19,8 +19,8 @@
 		04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JackNightsky-task8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD63C626A0D3D30027BD94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD63C726A0D3D30027BD94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04BD63CC26A0D3D30027BD94 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		04BD63CD26A0D3D30027BD94 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		04BD63CC26A0D3D30027BD94 /* ArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistViewController.h; sourceTree = "<group>"; };
+		04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistViewController.m; sourceTree = "<group>"; };
 		04BD63D026A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BD63D226A0D3D30027BD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BD63D526A0D3D30027BD94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
-				04BD63CC26A0D3D30027BD94 /* MainViewController.h */,
-				04BD63CD26A0D3D30027BD94 /* MainViewController.m */,
+				04BD63CC26A0D3D30027BD94 /* ArtistViewController.h */,
+				04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */,
 				04BD63CF26A0D3D30027BD94 /* Main.storyboard */,
 				04BD63D226A0D3D30027BD94 /* Assets.xcassets */,
 				04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BD63CE26A0D3D30027BD94 /* MainViewController.m in Sources */,
+				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
 			);

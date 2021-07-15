@@ -5,13 +5,13 @@
 //  Created by Jack on 15.07.21.
 //
 
-#import "MainViewController.h"
+#import "ArtistViewController.h"
 
-@interface MainViewController ()
+@interface ArtistViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation ArtistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

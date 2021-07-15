@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "ArtistViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    MainViewController *rootViewController = storyboard.instantiateInitialViewController;
+    ArtistViewController *rootViewController = storyboard.instantiateInitialViewController;
 
     [window setRootViewController:rootViewController];
 
