@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16026A16B27003E4817 /* DrawingsViewController.swift */; };
+		0465B16926A1784F003E4817 /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16826A1784F003E4817 /* ColorPalette.m */; };
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
 		04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */; };
 		04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63CF26A0D3D30027BD94 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackNightsky-task8-Bridging-Header.h"; sourceTree = "<group>"; };
 		0465B16026A16B27003E4817 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
+		0465B16726A1784F003E4817 /* ColorPalette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPalette.h; sourceTree = "<group>"; };
+		0465B16826A1784F003E4817 /* ColorPalette.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPalette.m; sourceTree = "<group>"; };
 		04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JackNightsky-task8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD63C626A0D3D30027BD94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD63C726A0D3D30027BD94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0465B16626A17826003E4817 /* ColorPalette */ = {
+			isa = PBXGroup;
+			children = (
+				0465B16726A1784F003E4817 /* ColorPalette.h */,
+				0465B16826A1784F003E4817 /* ColorPalette.m */,
+			);
+			path = ColorPalette;
+			sourceTree = "<group>";
+		};
 		04BD63BA26A0D3D20027BD94 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 		04BD63C526A0D3D20027BD94 /* JackNightsky-task8 */ = {
 			isa = PBXGroup;
 			children = (
+				0465B16626A17826003E4817 /* ColorPalette */,
 				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
 				04BD63CC26A0D3D30027BD94 /* ArtistViewController.h */,
@@ -148,6 +161,7 @@
 			files = (
 				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
+				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
 				0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
 			);

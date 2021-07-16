@@ -6,6 +6,7 @@
 //
 
 #import "ArtistViewController.h"
+#import "ColorPalette.h"
 
 @interface ArtistViewController ()
 
@@ -15,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.rsWhite;
     // Do any additional setup after loading the view.
 }
 
