@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
+		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16026A16B27003E4817 /* DrawingsViewController.swift */; };
 		0465B16926A1784F003E4817 /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16826A1784F003E4817 /* ColorPalette.m */; };
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackNightsky-task8-Bridging-Header.h"; sourceTree = "<group>"; };
 		0465B16026A16B27003E4817 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
 		0465B16726A1784F003E4817 /* ColorPalette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPalette.h; sourceTree = "<group>"; };
@@ -45,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */,
+				04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */,
+			);
+			name = RSSchool_T8_Fonts;
+			path = ../../Assets/RSSchool_T8_Fonts;
+			sourceTree = "<group>";
+		};
 		0465B16626A17826003E4817 /* ColorPalette */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,7 @@
 				04BD63D726A0D3D30027BD94 /* Info.plist */,
 				04BD63D826A0D3D30027BD94 /* main.m */,
 				0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */,
+				04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */,
 			);
 			path = "JackNightsky-task8";
 			sourceTree = "<group>";
@@ -148,6 +163,8 @@
 			files = (
 				04BD63D626A0D3D30027BD94 /* LaunchScreen.storyboard in Resources */,
 				04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */,
+				04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */,
+				04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */,
 				04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
