@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16026A16B27003E4817 /* DrawingsViewController.swift */; };
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
 		04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */; };
 		04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD63CF26A0D3D30027BD94 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackNightsky-task8-Bridging-Header.h"; sourceTree = "<group>"; };
+		0465B16026A16B27003E4817 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
 		04BD63C326A0D3D20027BD94 /* JackNightsky-task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JackNightsky-task8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD63C626A0D3D30027BD94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD63C726A0D3D30027BD94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,11 +65,13 @@
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
 				04BD63CC26A0D3D30027BD94 /* ArtistViewController.h */,
 				04BD63CD26A0D3D30027BD94 /* ArtistViewController.m */,
+				0465B16026A16B27003E4817 /* DrawingsViewController.swift */,
 				04BD63CF26A0D3D30027BD94 /* Main.storyboard */,
 				04BD63D226A0D3D30027BD94 /* Assets.xcassets */,
 				04BD63D426A0D3D30027BD94 /* LaunchScreen.storyboard */,
 				04BD63D726A0D3D30027BD94 /* Info.plist */,
 				04BD63D826A0D3D30027BD94 /* main.m */,
+				0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */,
 			);
 			path = "JackNightsky-task8";
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				TargetAttributes = {
 					04BD63C226A0D3D20027BD94 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -142,6 +148,7 @@
 			files = (
 				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
+				0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6TCBC57H7;
 				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
@@ -296,6 +304,9 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JackNightsky-task8/JackNightsky-task8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -305,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6TCBC57H7;
 				INFOPLIST_FILE = "JackNightsky-task8/Info.plist";
@@ -316,6 +328,8 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JackNightsky.JackNightsky-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JackNightsky-task8/JackNightsky-task8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

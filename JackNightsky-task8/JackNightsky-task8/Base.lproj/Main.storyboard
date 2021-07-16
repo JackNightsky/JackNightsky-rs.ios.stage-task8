@@ -36,12 +36,32 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Artist" id="vdh-Cf-mPk">
-                        <barButtonItem key="rightBarButtonItem" title="Drawings" id="ctj-Pn-CeH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Drawings" id="ctj-Pn-CeH">
+                            <connections>
+                                <segue destination="Zxn-G4-FAw" kind="show" id="JiQ-Nk-vSE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-622" y="82"/>
+        </scene>
+        <!--Drawings-->
+        <scene sceneID="VnY-hV-OG7">
+            <objects>
+                <viewController id="Zxn-G4-FAw" customClass="DrawingsViewController" customModule="JackNightsky_task8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ylT-Bc-f6G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kuK-Ff-1RX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drawings" id="UkX-Nl-8lT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgb-UI-6R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="82"/>
         </scene>
     </scenes>
     <resources>
