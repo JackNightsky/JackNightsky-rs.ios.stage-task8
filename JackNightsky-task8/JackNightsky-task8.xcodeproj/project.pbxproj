@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
+		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
 		0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16026A16B27003E4817 /* DrawingsViewController.swift */; };
 		0465B16926A1784F003E4817 /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16826A1784F003E4817 /* ColorPalette.m */; };
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
@@ -22,6 +23,8 @@
 /* Begin PBXFileReference section */
 		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		04178E4726A31FC1009BE089 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		04178E4826A31FC1009BE089 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
 		0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackNightsky-task8-Bridging-Header.h"; sourceTree = "<group>"; };
 		0465B16026A16B27003E4817 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
 		0465B16726A1784F003E4817 /* ColorPalette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPalette.h; sourceTree = "<group>"; };
@@ -59,6 +62,15 @@
 			path = ../../Assets/RSSchool_T8_Fonts;
 			sourceTree = "<group>";
 		};
+		04178E4626A31F8D009BE089 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				04178E4726A31FC1009BE089 /* CanvasView.h */,
+				04178E4826A31FC1009BE089 /* CanvasView.m */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
 		0465B16626A17826003E4817 /* ColorPalette */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		04BD63C526A0D3D20027BD94 /* JackNightsky-task8 */ = {
 			isa = PBXGroup;
 			children = (
+				04178E4626A31F8D009BE089 /* Canvas */,
 				0465B16626A17826003E4817 /* ColorPalette */,
 				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
@@ -178,6 +191,7 @@
 			files = (
 				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
+				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,
 				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
 				0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
