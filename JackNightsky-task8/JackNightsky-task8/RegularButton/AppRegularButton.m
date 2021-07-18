@@ -19,6 +19,10 @@
         
         self.layer.shadowColor = [UIColor.rsLightGreenSea colorWithAlphaComponent:1].CGColor;
         self.layer.shadowRadius  = 4;
+        
+        if (_stateActive) {
+            self.layer.shadowRadius  = self.layer.shadowRadius * 2;
+        }
     } else {
         [self commonInit];
     }
@@ -43,6 +47,10 @@
         self.alpha = 0.5;
     }
     
+    if (self.isSelected) {
+        _stateActive = YES;
+    }
+    
     self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18];
     
     // Button appearance for state NORMAL
@@ -58,6 +66,11 @@
     self.layer.shadowOffset  = CGSizeMake(0, 0);
     
     [self setTitleEdgeInsets:UIEdgeInsetsMake(5, 21, 5, 21)];
+    
+    if (_stateActive) {
+        self.layer.shadowColor = [UIColor.rsLightGreenSea colorWithAlphaComponent:1].CGColor;
+        self.layer.shadowRadius  = 4;
+    }
 }
 
 

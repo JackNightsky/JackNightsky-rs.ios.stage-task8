@@ -144,8 +144,74 @@
                     <view key="view" contentMode="scaleToFill" id="ylT-Bc-f6G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="thG-0v-JZl">
+                                <rect key="frame" x="88" y="94" width="200" height="205"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsd-ot-hfS" customClass="AppRegularButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9RC-j9-gqh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="f34-P4-O0M"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="uBP-tS-hXu"/>
+                                        </constraints>
+                                        <state key="normal" title="Planet">
+                                            <color key="titleColor" name="rsLightGreenSea"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-Jl-yQb" customClass="AppRegularButton">
+                                        <rect key="frame" x="0.0" y="55" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Oq5-Oj-XXT"/>
+                                            <constraint firstAttribute="height" constant="40" id="hTV-bf-zRY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="iXG-P7-tfo"/>
+                                        </constraints>
+                                        <state key="normal" title="Head">
+                                            <color key="titleColor" name="rsLightGreenSea"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-4L-8Uu" customClass="AppRegularButton">
+                                        <rect key="frame" x="0.0" y="110" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3rM-to-rpi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="8uT-fd-Qql"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="PEY-jJ-PeD"/>
+                                        </constraints>
+                                        <state key="normal" title="Tree">
+                                            <color key="titleColor" name="rsLightGreenSea"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44W-2x-1fK" customClass="AppRegularButton">
+                                        <rect key="frame" x="0.0" y="165" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="nwP-xy-2p7"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vtQ-W0-PLD"/>
+                                            <constraint firstAttribute="height" constant="40" id="zQ3-HR-Z1p"/>
+                                        </constraints>
+                                        <state key="normal" title="Landscape">
+                                            <color key="titleColor" name="rsLightGreenSea"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2so-Jl-yQb" firstAttribute="top" secondItem="zsd-ot-hfS" secondAttribute="bottom" constant="15" id="Anl-os-S65"/>
+                                    <constraint firstItem="44W-2x-1fK" firstAttribute="top" secondItem="vEv-4L-8Uu" secondAttribute="bottom" constant="15" id="FPD-bV-W2m"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JIp-md-9UP"/>
+                                    <constraint firstItem="vEv-4L-8Uu" firstAttribute="top" secondItem="2so-Jl-yQb" secondAttribute="bottom" constant="15" id="OQb-hd-z2T"/>
+                                    <constraint firstAttribute="height" constant="205" id="PdS-df-xcb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="205" id="eMT-hE-RhS"/>
+                                    <constraint firstAttribute="width" constant="200" id="raI-0h-ZLN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kuK-Ff-1RX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kuK-Ff-1RX" firstAttribute="bottom" secondItem="thG-0v-JZl" secondAttribute="bottom" constant="348" id="BIg-2r-15P"/>
+                            <constraint firstItem="thG-0v-JZl" firstAttribute="leading" secondItem="kuK-Ff-1RX" secondAttribute="leading" constant="88" id="Cw2-qk-dJ3"/>
+                            <constraint firstItem="thG-0v-JZl" firstAttribute="top" secondItem="kuK-Ff-1RX" secondAttribute="top" constant="50" id="jnN-4a-sLe"/>
+                            <constraint firstItem="kuK-Ff-1RX" firstAttribute="trailing" secondItem="thG-0v-JZl" secondAttribute="trailing" constant="87" id="pfW-pN-sZM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Drawings" id="UkX-Nl-8lT"/>
                 </viewController>
