@@ -9,9 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, CurrentStatement) {
+    ready,
+    active
+};
+
 @interface AppRegularButton : UIButton
 
-@property (nonatomic) BOOL stateActive;
+@property (nonatomic, readonly) CurrentStatement currentState;
+
+-(void)setCurrentState:(CurrentStatement)currentState;
 
 @end
 

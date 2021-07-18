@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-622" y="82"/>
+            <point key="canvasLocation" x="-586" y="81"/>
         </scene>
         <!--Drawings-->
         <scene sceneID="VnY-hV-OG7">
@@ -148,7 +148,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="thG-0v-JZl">
                                 <rect key="frame" x="88" y="94" width="200" height="205"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsd-ot-hfS" customClass="AppRegularButton">
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsd-ot-hfS" customClass="DrawingsButton" customModule="JackNightsky_task8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="9RC-j9-gqh"/>
@@ -158,8 +158,11 @@
                                         <state key="normal" title="Planet">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectPicture:" destination="Zxn-G4-FAw" eventType="touchUpInside" id="dmm-oK-Tdc"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-Jl-yQb" customClass="AppRegularButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-Jl-yQb" customClass="DrawingsButton" customModule="JackNightsky_task8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Oq5-Oj-XXT"/>
@@ -169,8 +172,11 @@
                                         <state key="normal" title="Head">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectPicture:" destination="Zxn-G4-FAw" eventType="touchUpInside" id="2bP-j6-AfY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-4L-8Uu" customClass="AppRegularButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-4L-8Uu" customClass="DrawingsButton" customModule="JackNightsky_task8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3rM-to-rpi"/>
@@ -180,8 +186,11 @@
                                         <state key="normal" title="Tree">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectPicture:" destination="Zxn-G4-FAw" eventType="touchUpInside" id="bh4-F8-VpW"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44W-2x-1fK" customClass="AppRegularButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44W-2x-1fK" customClass="DrawingsButton" customModule="JackNightsky_task8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="165" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="nwP-xy-2p7"/>
@@ -191,6 +200,9 @@
                                         <state key="normal" title="Landscape">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectPicture:" destination="Zxn-G4-FAw" eventType="touchUpInside" id="nX3-rY-baj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -198,7 +210,6 @@
                                     <constraint firstItem="44W-2x-1fK" firstAttribute="top" secondItem="vEv-4L-8Uu" secondAttribute="bottom" constant="15" id="FPD-bV-W2m"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JIp-md-9UP"/>
                                     <constraint firstItem="vEv-4L-8Uu" firstAttribute="top" secondItem="2so-Jl-yQb" secondAttribute="bottom" constant="15" id="OQb-hd-z2T"/>
-                                    <constraint firstAttribute="height" constant="205" id="PdS-df-xcb"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="205" id="eMT-hE-RhS"/>
                                     <constraint firstAttribute="width" constant="200" id="raI-0h-ZLN"/>
                                 </constraints>
@@ -207,13 +218,18 @@
                         <viewLayoutGuide key="safeArea" id="kuK-Ff-1RX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kuK-Ff-1RX" firstAttribute="bottom" secondItem="thG-0v-JZl" secondAttribute="bottom" constant="348" id="BIg-2r-15P"/>
                             <constraint firstItem="thG-0v-JZl" firstAttribute="leading" secondItem="kuK-Ff-1RX" secondAttribute="leading" constant="88" id="Cw2-qk-dJ3"/>
                             <constraint firstItem="thG-0v-JZl" firstAttribute="top" secondItem="kuK-Ff-1RX" secondAttribute="top" constant="50" id="jnN-4a-sLe"/>
                             <constraint firstItem="kuK-Ff-1RX" firstAttribute="trailing" secondItem="thG-0v-JZl" secondAttribute="trailing" constant="87" id="pfW-pN-sZM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Drawings" id="UkX-Nl-8lT"/>
+                    <connections>
+                        <outlet property="headButton" destination="2so-Jl-yQb" id="gcp-v9-d8F"/>
+                        <outlet property="lanscapeButton" destination="44W-2x-1fK" id="jvb-s1-Tjp"/>
+                        <outlet property="planetButton" destination="zsd-ot-hfS" id="Mto-5u-Phf"/>
+                        <outlet property="treeButton" destination="vEv-4L-8Uu" id="3q1-4O-xZt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgb-UI-6R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,25 @@
 @implementation AppRegularButton
 
 
+- (void)setCurrentState:(CurrentStatement)currentState {
+    switch (currentState) {
+        case ready:
+            _currentState = ready;
+            [self commonInit];
+            break;
+        case active:
+            _currentState = active;
+            self.layer.shadowColor = [UIColor.rsLightGreenSea colorWithAlphaComponent:1].CGColor;
+            self.layer.shadowRadius  = 4;
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+
 // Set appearens for states Checked and Unchecked
 -(void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
@@ -20,7 +39,7 @@
         self.layer.shadowColor = [UIColor.rsLightGreenSea colorWithAlphaComponent:1].CGColor;
         self.layer.shadowRadius  = 4;
         
-        if (_stateActive) {
+        if (self.currentState) {
             self.layer.shadowRadius  = self.layer.shadowRadius * 2;
         }
     } else {
@@ -39,7 +58,10 @@
         [self commonInit];
     }
 }
-
+//
+//- (void) setStateActive:(BOOL)stateActive {
+//    _stateActive = stateActive;
+//}
 
 - (void) commonInit {
     // crutch
@@ -48,7 +70,8 @@
     }
     
     if (self.isSelected) {
-        _stateActive = YES;
+        _currentState = active;
+        [self setSelected:NO];
     }
     
     self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18];
@@ -67,8 +90,12 @@
     
     [self setTitleEdgeInsets:UIEdgeInsetsMake(5, 21, 5, 21)];
     
-    if (_stateActive) {
+    if (_currentState == active) {
         self.layer.shadowColor = [UIColor.rsLightGreenSea colorWithAlphaComponent:1].CGColor;
+        self.layer.shadowRadius  = 4;
+    }
+    if (_currentState == ready) {
+        self.layer.shadowColor = [UIColor.rsBlack colorWithAlphaComponent:0.25].CGColor;
         self.layer.shadowRadius  = 4;
     }
 }

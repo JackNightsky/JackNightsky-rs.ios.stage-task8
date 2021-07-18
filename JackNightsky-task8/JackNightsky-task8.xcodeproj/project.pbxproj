@@ -11,6 +11,7 @@
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
 		04178E4C26A3658B009BE089 /* AppRegularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4B26A3658B009BE089 /* AppRegularButton.m */; };
+		0439057626A41AF800F464DD /* DrawingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439057526A41AF800F464DD /* DrawingsButton.swift */; };
 		0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16026A16B27003E4817 /* DrawingsViewController.swift */; };
 		0465B16926A1784F003E4817 /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465B16826A1784F003E4817 /* ColorPalette.m */; };
 		04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD63C726A0D3D30027BD94 /* AppDelegate.m */; };
@@ -28,6 +29,7 @@
 		04178E4826A31FC1009BE089 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
 		04178E4A26A3658B009BE089 /* AppRegularButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRegularButton.h; sourceTree = "<group>"; };
 		04178E4B26A3658B009BE089 /* AppRegularButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppRegularButton.m; sourceTree = "<group>"; };
+		0439057526A41AF800F464DD /* DrawingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsButton.swift; sourceTree = "<group>"; };
 		0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JackNightsky-task8-Bridging-Header.h"; sourceTree = "<group>"; };
 		0465B16026A16B27003E4817 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
 		0465B16726A1784F003E4817 /* ColorPalette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPalette.h; sourceTree = "<group>"; };
@@ -74,13 +76,14 @@
 			path = Canvas;
 			sourceTree = "<group>";
 		};
-		04178E4E26A3659C009BE089 /* RegularButton */ = {
+		04178E4E26A3659C009BE089 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				04178E4A26A3658B009BE089 /* AppRegularButton.h */,
 				04178E4B26A3658B009BE089 /* AppRegularButton.m */,
+				0439057526A41AF800F464DD /* DrawingsButton.swift */,
 			);
-			path = RegularButton;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		0465B16626A17826003E4817 /* ColorPalette */ = {
@@ -113,7 +116,7 @@
 			children = (
 				04178E4626A31F8D009BE089 /* Canvas */,
 				0465B16626A17826003E4817 /* ColorPalette */,
-				04178E4E26A3659C009BE089 /* RegularButton */,
+				04178E4E26A3659C009BE089 /* Buttons */,
 				04BD63C626A0D3D30027BD94 /* AppDelegate.h */,
 				04BD63C726A0D3D30027BD94 /* AppDelegate.m */,
 				04BD63CC26A0D3D30027BD94 /* ArtistViewController.h */,
@@ -204,6 +207,7 @@
 			files = (
 				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
+				0439057626A41AF800F464DD /* DrawingsButton.swift in Sources */,
 				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,
 				04178E4C26A3658B009BE089 /* AppRegularButton.m in Sources */,
 				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
