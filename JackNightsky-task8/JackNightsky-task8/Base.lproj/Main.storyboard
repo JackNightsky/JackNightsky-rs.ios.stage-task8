@@ -82,7 +82,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
@@ -91,6 +91,9 @@
                                                 <state key="normal" title="Draw">
                                                     <color key="titleColor" name="rsLightGreenSea"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="draw:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEx-oS-vUW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sz1-Lr-bxW" customClass="AppRegularButton">
                                                 <rect key="frame" x="20.5" y="52" width="95" height="32"/>
@@ -132,6 +135,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="canvas" destination="cEH-1q-hec" id="aq8-V1-3tr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
