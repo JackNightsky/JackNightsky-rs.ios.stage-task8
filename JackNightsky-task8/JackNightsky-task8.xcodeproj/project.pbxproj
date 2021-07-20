@@ -176,6 +176,7 @@
 		04BD63C526A0D3D20027BD94 /* JackNightsky-task8 */ = {
 			isa = PBXGroup;
 			children = (
+				0412CB7926A6EBAC00229F91 /* PlistWorker */,
 				0412CB6B26A680BE00229F91 /* UserPalette */,
 				0412CB6526A67E4000229F91 /* TimerView */,
 				04178E4626A31F8D009BE089 /* Canvas */,
@@ -194,7 +195,6 @@
 				0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */,
 				04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */,
 				0412CB7426A6CEF900229F91 /* pictureSettings.plist */,
-				0412CB7926A6EBAC00229F91 /* PlistWorker */,
 			);
 			path = "JackNightsky-task8";
 			sourceTree = "<group>";

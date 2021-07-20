@@ -17,3 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+/*
+ MARK: - pictureSettings.plist documentation xD
+ 
+ pictureName    (string)        - name of curent picture
+ drawDuration   (number in ms)  - how much time duration will be create picture
+ pathColors     ([string])      - array with names of colors
+ 
+ */

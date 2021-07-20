@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>pathColors</key>
+	<array>
+		<string>rsBlack</string>
+		<string>rsBlack</string>
+		<string>rsBlack</string>
+	</array>
+	<key>drawDuration</key>
+	<integer>1000</integer>
 	<key>pictureName</key>
 	<string>head</string>
 </dict>
