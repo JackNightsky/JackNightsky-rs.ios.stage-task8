@@ -13,6 +13,9 @@
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
         </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -657,7 +660,7 @@
                                                 <color key="textColor" name="rsBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1.5" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-Zh-xPS">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-Zh-xPS">
                                                 <rect key="frame" x="47" y="0.0" width="227" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="kyl-4w-AtH"/>
@@ -680,13 +683,21 @@
                                             <constraint firstItem="5gT-Zh-xPS" firstAttribute="centerY" secondItem="r9v-qh-uD5" secondAttribute="centerY" id="sry-gU-mPs"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ext-Rb-Yeq">
+                                        <rect key="frame" x="164" y="161" width="47.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="r9v-qh-uD5" secondAttribute="trailing" constant="26" id="63n-5C-Whh"/>
                                     <constraint firstItem="GFx-PC-AaG" firstAttribute="top" secondItem="apM-UN-lOr" secondAttribute="top" constant="20" id="Jmx-oS-npw"/>
+                                    <constraint firstItem="ext-Rb-Yeq" firstAttribute="top" secondItem="r9v-qh-uD5" secondAttribute="bottom" constant="25" id="KNh-zP-If9"/>
                                     <constraint firstItem="r9v-qh-uD5" firstAttribute="leading" secondItem="apM-UN-lOr" secondAttribute="leading" constant="26" id="Kes-b4-Z73"/>
                                     <constraint firstAttribute="trailing" secondItem="GFx-PC-AaG" secondAttribute="trailing" constant="40" id="YsP-wW-WwQ"/>
+                                    <constraint firstItem="ext-Rb-Yeq" firstAttribute="centerX" secondItem="apM-UN-lOr" secondAttribute="centerX" id="hs2-XJ-VHW"/>
                                     <constraint firstItem="GFx-PC-AaG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="apM-UN-lOr" secondAttribute="leading" constant="250" id="wXk-Jb-QxO"/>
                                     <constraint firstItem="r9v-qh-uD5" firstAttribute="top" secondItem="GFx-PC-AaG" secondAttribute="bottom" constant="40" id="z3O-92-7ey"/>
                                 </constraints>
