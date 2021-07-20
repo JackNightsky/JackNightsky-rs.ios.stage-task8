@@ -27,8 +27,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.rsWhite;
     // Do any additional setup after loading the view.
-    NSLog(@"drawPlanet");
-
+//    NSLog(@"drawPlanet");
 }
 
 

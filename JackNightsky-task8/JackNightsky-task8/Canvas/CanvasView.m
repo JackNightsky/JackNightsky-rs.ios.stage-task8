@@ -75,12 +75,6 @@
     [path0 addLineToPoint:CGPointMake(209, 103.5)];
     [path0 addLineToPoint:CGPointMake(213, 116)];
 
-    path0.lineWidth = 1;
-    [UIColor.blackColor setStroke];
-    [path0 stroke];
-    
-    
-
     // MARK: - path1
     UIBezierPath * path1 = [UIBezierPath bezierPath];
     [path1 moveToPoint:CGPointMake(204, 120)];
@@ -121,11 +115,6 @@
     [path1 addLineToPoint:CGPointMake(194.5, 104.5)];
     [path1 addLineToPoint:CGPointMake(199.5, 109.5)];
     [path1 addLineToPoint:CGPointMake(207, 114)];
-
-    path1.lineWidth = 1;
-    [UIColor.blackColor setStroke];
-    [path1 stroke];
-    
     
 
     // MARK: - path2
@@ -168,10 +157,6 @@
     [path2 addLineToPoint:CGPointMake(190, 205)];
     [path2 addLineToPoint:CGPointMake(181.5, 226.5)];
     [path2 addLineToPoint:CGPointMake(178.5, 252.5)];
-
-    path2.lineWidth = 1;
-    [UIColor.blackColor setStroke];
-    [path2 stroke];
     
     
     // MARK: - add
@@ -179,43 +164,26 @@
     [lineLayer0 setPath:path0.CGPath];
     [lineLayer0 setStrokeColor:color0.CGColor];
     [lineLayer0 setFillColor:nil];
-
     [lineLayer0 setStrokeStart:0.0];
     [lineLayer0 setStrokeEnd:progress];
-
     [self.layer addSublayer:lineLayer0];
     
     [lineLayer1 setPath:path1.CGPath];
     [lineLayer1 setStrokeColor:color1.CGColor];
     [lineLayer1 setFillColor:nil];
-
     [lineLayer1 setStrokeStart:0.0];
     [lineLayer1 setStrokeEnd:progress];
-
     [self.layer addSublayer:lineLayer1];
 
     [lineLayer2 setPath:path2.CGPath];
     [lineLayer2 setStrokeColor:color2.CGColor];
     [lineLayer2 setFillColor:nil];
-
     [lineLayer2 setStrokeStart:0.0];
-//    [lineLayer2 setStrokeEnd:progress];
-
+    [lineLayer2 setStrokeEnd:progress];
     [self.layer addSublayer:lineLayer2];
-//
-    
-    NSLog(@"self.layer sublayers: %@", self.layer.sublayers);
-    [self clearsContextBeforeDrawing];
 
-    [CATransaction begin];
-    [CATransaction setDisableActions:YES];
-    // change your property here
-    lineLayer2.strokeEnd = progress;
-    [CATransaction commit];
-
-    
-    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
-} // srawHead
+    [self.layer setNeedsLayout];
+} // drawHead
 
 
 // MARK: - drawPlanet
@@ -1009,15 +977,6 @@
     [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
 
 } // drawTree
-
-
-
-
-
-
-
-
-
 
 /*
 // Only override drawRect: if you perform custom drawing.
