@@ -9,6 +9,7 @@
 #import "ColorPalette.h"
 #import "CanvasView.h"
 #import "AppRegularButton.h"
+#import "UserPaletteViewController.h"
 
 @interface ArtistViewController ()
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;

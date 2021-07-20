@@ -87,7 +87,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
+                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="-586" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--User Palette View Controller-->
         <scene sceneID="r3B-cu-4Cc">
             <objects>
-                <viewController storyboardIdentifier="UserPaletteVC" modalPresentationStyle="overCurrentContext" id="OLe-fw-qu5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserPaletteVC" modalPresentationStyle="overCurrentContext" id="OLe-fw-qu5" customClass="UserPaletteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Znr-KL-8Yv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +171,10 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Save:" destination="4Wz-NM-PQ6" eventType="touchUpInside" id="Dng-09-W9X"/>
+                                            <action selector="saveChoicesAndClosePalette:" destination="OLe-fw-qu5" eventType="touchUpInside" id="KM5-gq-cbc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -192,6 +196,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="333"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6f-94-wdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4Wz-NM-PQ6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-943.20000000000005" y="775.86206896551732"/>
         </scene>
@@ -293,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="261" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--TimerViewController-->
         <scene sceneID="K1b-hR-Lzb">
             <objects>
-                <viewController storyboardIdentifier="TimerVC" modalPresentationStyle="overCurrentContext" id="JkM-RR-Tdw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerVC" modalPresentationStyle="overCurrentContext" id="JkM-RR-Tdw" userLabel="TimerViewController" customClass="TimerViewController" customModule="JackNightsky_task8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okt-iK-L29">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,6 +319,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" name="rsLightGreenSea"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveChoiseAndCloseVC:" destination="JkM-RR-Tdw" eventType="touchUpInside" id="pn5-bb-Lix"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
