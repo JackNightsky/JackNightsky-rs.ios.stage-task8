@@ -24,10 +24,13 @@ class DrawingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .rsWhite;
-                
+        print("drasings self: ", self)
     }
     
+
+        
     @IBAction func selectPicture(_ sender: AppRegularButton) {
+        
         
         print("sender.state", sender.state)
         planetButton.setCurrentState(.ready)
@@ -57,6 +60,8 @@ class DrawingsViewController: UIViewController {
         default:
             print("Picture not changed")
         }
+        
+        PlistWorker.writeValue("pictureName", sender.titleLabel?.text?.lowercased() ?? "head")
     }
     
     /*

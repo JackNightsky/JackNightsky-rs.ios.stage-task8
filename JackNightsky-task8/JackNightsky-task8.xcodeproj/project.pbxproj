@@ -13,6 +13,8 @@
 		0412CB6D26A6825200229F91 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6C26A6825200229F91 /* TimerViewController.swift */; };
 		0412CB7026A685A200229F91 /* ColorChooseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6F26A685A200229F91 /* ColorChooseButton.m */; };
 		0412CB7326A68B3E00229F91 /* ColorChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7226A68B3E00229F91 /* ColorChoose.m */; };
+		0412CB7526A6CEF900229F91 /* pictureSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0412CB7426A6CEF900229F91 /* pictureSettings.plist */; };
+		0412CB7826A6EBA700229F91 /* PlistWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7726A6EBA700229F91 /* PlistWorker.m */; };
 		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
@@ -39,6 +41,9 @@
 		0412CB6F26A685A200229F91 /* ColorChooseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChooseButton.m; sourceTree = "<group>"; };
 		0412CB7126A68B3E00229F91 /* ColorChoose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorChoose.h; sourceTree = "<group>"; };
 		0412CB7226A68B3E00229F91 /* ColorChoose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChoose.m; sourceTree = "<group>"; };
+		0412CB7426A6CEF900229F91 /* pictureSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = pictureSettings.plist; sourceTree = "<group>"; };
+		0412CB7626A6EBA700229F91 /* PlistWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistWorker.h; sourceTree = "<group>"; };
+		0412CB7726A6EBA700229F91 /* PlistWorker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistWorker.m; sourceTree = "<group>"; };
 		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		04178E4726A31FC1009BE089 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -103,6 +108,15 @@
 				0412CB7226A68B3E00229F91 /* ColorChoose.m */,
 			);
 			path = UserPalette;
+			sourceTree = "<group>";
+		};
+		0412CB7926A6EBAC00229F91 /* PlistWorker */ = {
+			isa = PBXGroup;
+			children = (
+				0412CB7626A6EBA700229F91 /* PlistWorker.h */,
+				0412CB7726A6EBA700229F91 /* PlistWorker.m */,
+			);
+			path = PlistWorker;
 			sourceTree = "<group>";
 		};
 		04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */ = {
@@ -179,6 +193,8 @@
 				04BD63D826A0D3D30027BD94 /* main.m */,
 				0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */,
 				04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */,
+				0412CB7426A6CEF900229F91 /* pictureSettings.plist */,
+				0412CB7926A6EBAC00229F91 /* PlistWorker */,
 			);
 			path = "JackNightsky-task8";
 			sourceTree = "<group>";
@@ -244,6 +260,7 @@
 				04BD63D326A0D3D30027BD94 /* Assets.xcassets in Resources */,
 				04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */,
 				04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */,
+				0412CB7526A6CEF900229F91 /* pictureSettings.plist in Resources */,
 				04BD63D126A0D3D30027BD94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +278,7 @@
 				0439057626A41AF800F464DD /* DrawingsButton.swift in Sources */,
 				0412CB6D26A6825200229F91 /* TimerViewController.swift in Sources */,
 				0412CB6426A67AE500229F91 /* UserPaletteView.m in Sources */,
+				0412CB7826A6EBA700229F91 /* PlistWorker.m in Sources */,
 				0412CB7026A685A200229F91 /* ColorChooseButton.m in Sources */,
 				0412CB6A26A680B900229F91 /* UserPaletteViewController.m in Sources */,
 				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,

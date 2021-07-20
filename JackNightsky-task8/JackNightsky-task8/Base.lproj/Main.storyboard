@@ -134,7 +134,8 @@
                     <navigationItem key="navigationItem" title="Artist" id="vdh-Cf-mPk">
                         <barButtonItem key="rightBarButtonItem" title="Drawings" id="ctj-Pn-CeH">
                             <connections>
-                                <segue destination="Zxn-G4-FAw" kind="show" id="JiQ-Nk-vSE"/>
+                                <action selector="openDrawings:" destination="BYZ-38-t0r" id="Oal-1b-iae"/>
+                                <segue destination="Zxn-G4-FAw" kind="show" destinationCreationSelector="openDrawings" id="lWd-4B-yid"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -488,7 +489,7 @@
         <!--Drawings-->
         <scene sceneID="VnY-hV-OG7">
             <objects>
-                <viewController id="Zxn-G4-FAw" customClass="DrawingsViewController" customModule="JackNightsky_task8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Drawings" id="Zxn-G4-FAw" customClass="DrawingsViewController" customModule="JackNightsky_task8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ylT-Bc-f6G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

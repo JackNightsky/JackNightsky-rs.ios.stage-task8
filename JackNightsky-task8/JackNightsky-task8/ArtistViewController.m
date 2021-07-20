@@ -10,6 +10,7 @@
 #import "CanvasView.h"
 #import "AppRegularButton.h"
 #import "UserPaletteViewController.h"
+#import "PlistWorker.h"
 
 @interface ArtistViewController ()
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;
@@ -27,7 +28,7 @@
     self.view.backgroundColor = UIColor.rsWhite;
     // Do any additional setup after loading the view.
     NSLog(@"drawPlanet");
-    
+
 }
 
 
@@ -54,11 +55,28 @@
 }
 
 - (IBAction)draw:(id)sender {
-    [_canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
-    [_canvas drawPlanet :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
-    [_canvas drawLandscape :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
-    [_canvas drawTree :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+    NSString * currentPicture = [PlistWorker readValue:@"pictureName"];
+    
+    if ([currentPicture isEqualToString: @"head"]) {
+        [_canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+    } else if ([currentPicture isEqualToString: @"planet"]) {
+        [_canvas drawPlanet :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+    } else if ([currentPicture isEqualToString: @"landscape"]) {
+        [_canvas drawLandscape :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+    } else if ([currentPicture isEqualToString: @"tree"]) {
+        [_canvas drawTree :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
+
 
 
 @end
