@@ -115,15 +115,23 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
         NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
         NSString * currentPicture = [PlistWorker readValueForKey:@"pictureName"];
+        NSArray * pathColors = [PlistWorker readValueForKey:@"pathColors"];
+        UIColor * color0 = [UIColor colorNamed:[pathColors objectAtIndex:0]];
+        UIColor * color1 = [UIColor colorNamed:[pathColors objectAtIndex:1]];
+        UIColor * color2 = [UIColor colorNamed:[pathColors objectAtIndex:2]];
+        NSLog(@"Color0 %@", color0);
+        NSLog(@"Color1 %@", color1);
+        NSLog(@"Color2 %@", color2);
+        
         
         if ([currentPicture isEqualToString: @"head"]) {
-            [self.canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+            [self.canvas drawHead       :color0 :color1 :color2];
         } else if ([currentPicture isEqualToString: @"planet"]) {
-            [self.canvas drawPlanet :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+            [self.canvas drawPlanet     :color0 :color1 :color2];
         } else if ([currentPicture isEqualToString: @"landscape"]) {
-            [self.canvas drawLandscape :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+            [self.canvas drawLandscape  :color0 :color1 :color2];
         } else if ([currentPicture isEqualToString: @"tree"]) {
-            [self.canvas drawTree :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
+            [self.canvas drawTree       :color0 :color1 :color2];
         }
 //        NSLog(@"okey: %@", self.currentState);
         [self setCurrentState:done];

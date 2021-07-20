@@ -10,7 +10,7 @@
 @implementation PlistWorker
 
 
-+(NSString*)readValueForKey:(NSString*)key {
++(id)readValueForKey:(NSString*)key {
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -26,7 +26,7 @@
     
     NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     //load from savedStock example int value
-    NSString * value = [savedStock objectForKey:key];
+    id value = [savedStock objectForKey:key];
 //    NSLog(@"key-value: %@ : %@", key, value);
     return value;
 }
