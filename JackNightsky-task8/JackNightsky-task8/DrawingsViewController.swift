@@ -31,7 +31,6 @@ class DrawingsViewController: UIViewController {
         
         if (currentPicture == "planet") {
             planetButton.setCurrentState(.active)
-            planetButton.isSelected = true
         }
         if (currentPicture == "head") {
             headButton.setCurrentState(.active)
