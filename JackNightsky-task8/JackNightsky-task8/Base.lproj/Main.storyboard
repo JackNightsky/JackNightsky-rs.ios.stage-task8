@@ -196,6 +196,9 @@
                                                                 <state key="normal" title="Button">
                                                                     <color key="titleColor" name="rsRed"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="49F-VN-706"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -209,7 +212,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3j-7b-IPx" userLabel="BlueColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="60" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFq-B3-KBQ" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFq-B3-KBQ" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsBlue"/>
                                                                 <constraints>
@@ -217,6 +220,9 @@
                                                                     <constraint firstAttribute="width" constant="24" id="uNa-a8-ROS"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="Pi6-7j-Ivh"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -230,7 +236,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vy-8A-GxE" userLabel="GreenColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-PY-DxD" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-PY-DxD" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsGreen"/>
                                                                 <constraints>
@@ -238,6 +244,9 @@
                                                                     <constraint firstAttribute="height" constant="24" id="zOZ-a1-I9x"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="m5k-8f-b8P"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -251,7 +260,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-1e-RYo" userLabel="GreyColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="180" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZa-Qi-hh8" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZa-Qi-hh8" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsGrey"/>
                                                                 <constraints>
@@ -259,6 +268,9 @@
                                                                     <constraint firstAttribute="width" constant="24" id="sJS-Ye-jlc"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="e3h-YA-jYS"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -272,7 +284,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-gf-XtU" userLabel="LightPurpleColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="240" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-oT-DWZ" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-oT-DWZ" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsLightPurple"/>
                                                                 <constraints>
@@ -280,6 +292,9 @@
                                                                     <constraint firstAttribute="height" constant="24" id="bDs-mY-y2G"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="jFM-pb-sEq"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -293,7 +308,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-dN-yX6" userLabel="ShrimpleColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="300" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vou-IX-77c" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vou-IX-77c" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsShrimple"/>
                                                                 <constraints>
@@ -301,6 +316,9 @@
                                                                     <constraint firstAttribute="width" constant="24" id="hgk-zy-qok"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="Ube-jY-Auk"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -322,7 +340,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGQ-fR-phT" userLabel="YellowColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-4v-t6t" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-4v-t6t" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsYellow"/>
                                                                 <constraints>
@@ -332,6 +350,9 @@
                                                                 <state key="normal" title="Button">
                                                                     <color key="titleColor" name="rsRed"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="v3m-dD-u9C"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -345,7 +366,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkq-AL-jfb" userLabel="CyanColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="60" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-FP-9Dp" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-FP-9Dp" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsBlue"/>
                                                                 <constraints>
@@ -355,6 +376,9 @@
                                                                 <state key="normal" title="Button">
                                                                     <color key="titleColor" name="rsCyan"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="2Nd-lN-M78"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -368,7 +392,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXX-op-wou" userLabel="PinkColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54r-Y1-ysp" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54r-Y1-ysp" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsPink"/>
                                                                 <constraints>
@@ -376,6 +400,9 @@
                                                                     <constraint firstAttribute="width" constant="24" id="pyN-Rq-fj4"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="6of-wC-wj3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -389,7 +416,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZI-BC-B3Q" userLabel="DirtBlueColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="180" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-gj-zck" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-gj-zck" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsDirtBlue"/>
                                                                 <constraints>
@@ -397,6 +424,9 @@
                                                                     <constraint firstAttribute="height" constant="24" id="yhl-f9-Gj4"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="wG2-h2-Gf0"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -410,7 +440,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrA-EV-8BZ" userLabel="DirtGreenColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="240" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-j3-uBR" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-j3-uBR" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsDirtGreen"/>
                                                                 <constraints>
@@ -418,6 +448,9 @@
                                                                     <constraint firstAttribute="height" constant="24" id="hlh-tH-SGm"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="fDm-eT-NAb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -431,7 +464,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-sT-E32" userLabel="BrownColorChoose" customClass="ColorChoose">
                                                         <rect key="frame" x="300" y="0.0" width="40" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Q-GB-ksr" customClass="ColorChooseButton">
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Q-GB-ksr" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
                                                                 <color key="backgroundColor" name="rsBrown"/>
                                                                 <constraints>
@@ -439,6 +472,9 @@
                                                                     <constraint firstAttribute="height" constant="24" id="yex-z3-16X"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="colorChooseBtnTap:" destination="OLe-fw-qu5" eventType="touchUpInside" id="IS6-A6-J3D"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="rsWhite"/>
@@ -480,6 +516,9 @@
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="333"/>
+                    <connections>
+                        <outlet property="paletteView" destination="x4u-sG-AE2" id="1EB-D1-aUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6f-94-wdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="4Wz-NM-PQ6" userLabel="Exit" sceneMemberID="exit"/>

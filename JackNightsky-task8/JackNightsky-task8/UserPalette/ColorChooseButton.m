@@ -58,8 +58,8 @@
        
     } else {
         self.choosed = YES;
-        CGAffineTransform transform = CGAffineTransformMakeScale(1.6, 1.6);
-        self.layer.cornerRadius = 5;
+        CGAffineTransform transform = CGAffineTransformMakeScale(1.4, 1.4);
+        self.layer.cornerRadius = 6;
         [self setTransform:transform];
     }
     
