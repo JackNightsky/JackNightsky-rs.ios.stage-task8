@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0412CB6426A67AE500229F91 /* UserPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6326A67AE500229F91 /* UserPaletteView.m */; };
 		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0412CB6226A67AE500229F91 /* UserPaletteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserPaletteView.h; sourceTree = "<group>"; };
+		0412CB6326A67AE500229F91 /* UserPaletteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserPaletteView.m; sourceTree = "<group>"; };
 		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		04178E4726A31FC1009BE089 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -57,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0412CB6126A67A7A00229F91 /* UserPaletteView */ = {
+			isa = PBXGroup;
+			children = (
+				0412CB6226A67AE500229F91 /* UserPaletteView.h */,
+				0412CB6326A67AE500229F91 /* UserPaletteView.m */,
+			);
+			path = UserPaletteView;
+			sourceTree = "<group>";
+		};
 		04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				04BD63D826A0D3D30027BD94 /* main.m */,
 				0465B15F26A16B27003E4817 /* JackNightsky-task8-Bridging-Header.h */,
 				04178E4126A22BC1009BE089 /* RSSchool_T8_Fonts */,
+				0412CB6126A67A7A00229F91 /* UserPaletteView */,
 			);
 			path = "JackNightsky-task8";
 			sourceTree = "<group>";
@@ -208,6 +221,7 @@
 				04BD63CE26A0D3D30027BD94 /* ArtistViewController.m in Sources */,
 				04BD63C826A0D3D30027BD94 /* AppDelegate.m in Sources */,
 				0439057626A41AF800F464DD /* DrawingsButton.swift in Sources */,
+				0412CB6426A67AE500229F91 /* UserPaletteView.m in Sources */,
 				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,
 				04178E4C26A3658B009BE089 /* AppRegularButton.m in Sources */,
 				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
