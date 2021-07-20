@@ -34,11 +34,11 @@
     [_layer1 setStrokeEnd: _progress];
     [_layer2 setStrokeEnd: _progress];
     
-    NSLog(@"drawDuration from file: %@", [PlistWorker readValueForKey:@"drawDuration"]);
+//    NSLog(@"drawDuration from file: %@", [PlistWorker readValueForKey:@"drawDuration"]);
     NSString* drawDuration = [PlistWorker readValueForKey:@"drawDuration"];
-    NSLog(@"drawDuration: %f", drawDuration.floatValue / 100);
+//    NSLog(@"drawDuration: %f", drawDuration.floatValue / 100);
     float duration = drawDuration.floatValue / 100;
-    NSLog(@"duration: %f", duration);
+//    NSLog(@"duration: %f", duration);
     
     
     if (_progress < 1) {
@@ -47,7 +47,7 @@
         _progress = 1;
         
     }
-    NSLog(@"progress = %f", _progress);
+//    NSLog(@"progress = %f", _progress);
 }
 
 -(void)reverseStrokeStart {
@@ -63,7 +63,7 @@
     } else {
         _progress = 0;
     }
-    NSLog(@"progress = %f", _progress);
+//    NSLog(@"progress = %f", _progress);
 }
 
 

@@ -15,6 +15,7 @@
 		0412CB7326A68B3E00229F91 /* ColorChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7226A68B3E00229F91 /* ColorChoose.m */; };
 		0412CB7526A6CEF900229F91 /* pictureSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0412CB7426A6CEF900229F91 /* pictureSettings.plist */; };
 		0412CB7826A6EBA700229F91 /* PlistWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7726A6EBA700229F91 /* PlistWorker.m */; };
+		0412CB7B26A7638A00229F91 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7A26A7638A00229F91 /* CustomSlider.swift */; };
 		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
@@ -44,6 +45,7 @@
 		0412CB7426A6CEF900229F91 /* pictureSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = pictureSettings.plist; sourceTree = "<group>"; };
 		0412CB7626A6EBA700229F91 /* PlistWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistWorker.h; sourceTree = "<group>"; };
 		0412CB7726A6EBA700229F91 /* PlistWorker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistWorker.m; sourceTree = "<group>"; };
+		0412CB7A26A7638A00229F91 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		04178E4726A31FC1009BE089 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				0412CB6626A67E7900229F91 /* TimerView.swift */,
 				0412CB6C26A6825200229F91 /* TimerViewController.swift */,
+				0412CB7A26A7638A00229F91 /* CustomSlider.swift */,
 			);
 			path = TimerView;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				0412CB6A26A680B900229F91 /* UserPaletteViewController.m in Sources */,
 				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,
 				04178E4C26A3658B009BE089 /* AppRegularButton.m in Sources */,
+				0412CB7B26A7638A00229F91 /* CustomSlider.swift in Sources */,
 				0412CB7326A68B3E00229F91 /* ColorChoose.m in Sources */,
 				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
 				0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */,

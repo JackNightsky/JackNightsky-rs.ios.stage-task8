@@ -86,7 +86,7 @@
     
 //    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:userPaletteViewController animated:YES completion:nil];
-    NSLog(@"UserPalette isBeingPresented%d", userPaletteViewController.isBeingPresented);
+//    NSLog(@"UserPalette isBeingPresented%d", userPaletteViewController.isBeingPresented);
     
 }
 
@@ -96,7 +96,7 @@
     
 //    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:timerViewController animated:YES completion:nil];
-    NSLog(@"Timer isBeingPresented%d", timerViewController.isBeingPresented);
+//    NSLog(@"Timer isBeingPresented%d", timerViewController.isBeingPresented);
     
     
 }
@@ -104,14 +104,13 @@
 
 - (IBAction)draw:(AppRegularButton*)sender {
     
-    NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
-    NSLog(@"_currentState == idle %d", _currentState == idle);
-    NSLog(@"_currentState == draw %d", _currentState == draw);
-    NSLog(@"_currentState == done %d", _currentState == done);
+//    NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
+//    NSLog(@"_currentState == idle %d", _currentState == idle);
+//    NSLog(@"_currentState == draw %d", _currentState == draw);
+//    NSLog(@"_currentState == done %d", _currentState == done);
     
     if ([_drawButton.currentTitle isEqualToString: @"Draw"] && _currentState == idle) {
         [_canvas reset];
-        NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
         [self stopTimer];
         
@@ -122,7 +121,7 @@
                                        userInfo:nil
                                         repeats:YES];
         
-        NSLog(@"xxxx");
+//        NSLog(@"xxxx");
         _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1
                                          target:self
                                        selector:@selector(checkProgress)
@@ -137,7 +136,7 @@
                                                userInfo:nil
                                                 repeats:YES];
         
-        NSLog(@"xxxx");
+//        NSLog(@"xxxx");
         _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.03
                                          target:self
                                        selector:@selector(checkProgressReverse)
@@ -150,7 +149,7 @@
 
 -(void)checkProgress {
     if (self.canvas.progress == 1) {
-        NSLog(@"self.canvas.progress %f", self.canvas.progress);
+//        NSLog(@"self.canvas.progress %f", self.canvas.progress);
         [self setCurrentState:done];
         [self stopTimer];
         [self stopTimer2];
@@ -159,7 +158,7 @@
 
 -(void)checkProgressReverse {
     if (self.canvas.progress == 0) {
-        NSLog(@"self.canvas.progress %f", self.canvas.progress);
+//        NSLog(@"self.canvas.progress %f", self.canvas.progress);
         [self setCurrentState:idle];
         [self stopTimer];
         [self stopTimer2];
