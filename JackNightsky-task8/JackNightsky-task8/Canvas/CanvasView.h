@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
+@property (nonatomic) float progress;
+- (void)drawMoterFucker:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2;
+- (void)changeStrokeEnd;
 - (void)reset;
 - (void)drawHead:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;
 - (void)drawPlanet:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;

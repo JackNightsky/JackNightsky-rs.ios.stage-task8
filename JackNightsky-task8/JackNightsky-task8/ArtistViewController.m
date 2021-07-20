@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
 
 @property (nonatomic) ArtistVCStatement currentState;
 -(void)setCurrentState:(ArtistVCStatement)currentState;
-
+@property (nonatomic) NSTimer * timer;
 @end
 
 @implementation ArtistViewController
@@ -109,48 +109,54 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
     
 }
 
+
 - (IBAction)draw:(id)sender {
+    
+    float drawDuration = [PlistWorker readValueForKey:@"drawDuration"].floatValue / 100;
     
     if (_currentState == idle) {
         NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
-        NSString * currentPicture = [PlistWorker readValueForKey:@"pictureName"];
-        NSArray * pathColors = [PlistWorker readValueForKey:@"pathColors"];
-        UIColor * color0 = [UIColor colorNamed:[pathColors objectAtIndex:0]];
-        UIColor * color1 = [UIColor colorNamed:[pathColors objectAtIndex:1]];
-        UIColor * color2 = [UIColor colorNamed:[pathColors objectAtIndex:2]];
-        NSLog(@"Color0 %@", color0);
-        NSLog(@"Color1 %@", color1);
-        NSLog(@"Color2 %@", color2);
         
         
-        if ([currentPicture isEqualToString: @"head"]) {
-            [self.canvas drawHead       :color0 :color1 :color2];
-        } else if ([currentPicture isEqualToString: @"planet"]) {
-            [self.canvas drawPlanet     :color0 :color1 :color2];
-        } else if ([currentPicture isEqualToString: @"landscape"]) {
-            [self.canvas drawLandscape  :color0 :color1 :color2];
-        } else if ([currentPicture isEqualToString: @"tree"]) {
-            [self.canvas drawTree       :color0 :color1 :color2];
-        }
-//        NSLog(@"okey: %@", self.currentState);
+        
+        float timeInterval = 1.0/60.0;
+        _timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                         target:self.canvas
+                                       selector:@selector(changeStrokeEnd)
+                                       userInfo:nil
+                                        repeats:YES];
+        
+        [NSTimer scheduledTimerWithTimeInterval:drawDuration
+                                         target:self
+                                       selector:@selector(stopTimer)
+                                       userInfo:nil
+                                        repeats:NO];
+        
+//        float current_time = _timer.timeInterval;
+//        float start_time = _timer.timeInterval;
         [self setCurrentState:done];
+        
     } else if (_currentState == draw) {
         NSLog(@"_currentState == draw");
         [self setCurrentState:done];
+        [self stopTimer];
     } else if (_currentState == done) {
         NSLog(@"_currentState == done");
         [self setCurrentState:idle];
+        [self stopTimer];
     } else {
         NSLog(@"_currentState is nil");
     }
     
-    
-    
-    
 }
 
-
+-(void)stopTimer {
+    if ([_timer isValid]) {
+        [_timer invalidate];
+    }
+    _timer = nil;
+}
 
 
 

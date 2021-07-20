@@ -108,6 +108,11 @@
 
 - (IBAction)saveChoicesAndClosePalette:(id)sender {
 //    TODO: create results and send to AtristVC
+    while (_colorsArray.count < 3) {
+        [_colorsArray addObject:@"rsBlack"];
+    }
+    
+    
     [_colorsArray shuffle];
     NSLog(@"_colorsArray shuffled: %@", _colorsArray);
     [PlistWorker writeValueForKey:@"pathColors" withValue:_colorsArray];

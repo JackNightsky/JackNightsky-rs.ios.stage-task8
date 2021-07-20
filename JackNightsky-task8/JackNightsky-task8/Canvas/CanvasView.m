@@ -7,24 +7,55 @@
 
 #import "CanvasView.h"
 #import "ColorPalette.h"
+#import "PlistWorker.h"
+
+@interface CanvasView ()
+@property (nonatomic) CAShapeLayer * layer0;
+@property (nonatomic) CAShapeLayer * layer1;
+@property (nonatomic) CAShapeLayer * layer2;
+@end
+
 
 @implementation CanvasView
+
+-(void)changeStrokeEnd {
+    
+    [_layer0 setStrokeEnd: _progress];
+    [_layer1 setStrokeEnd: _progress];
+    [_layer2 setStrokeEnd: _progress];
+    
+    float drawDuration = [PlistWorker readValueForKey:@"drawDuration"].floatValue / 100;
+    NSLog(@"drawDuration: %d", drawDuration);
+    if (_progress < 1) {
+        _progress += 1 * drawDuration / 60;
+    } else {
+        _progress = 1;
+    }
+    NSLog(@"progress = %f", _progress);
+//    self setStroke
+//    [self.layer.sublayers objectAtIndex:0]
+}
+
 
 -(void)reset {
     [self commonInit];
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
+//    _progress = 0;
+    [self setNeedsDisplay];
 }
 
 
 - (void) commonInit {
+    _progress = 0;
     self.backgroundColor = UIColor.rsWhite;
     self.layer.cornerRadius  = 8;
     self.layer.shadowColor   = UIColor.rsChillSky.CGColor;
     self.layer.shadowRadius  = 4;
     self.layer.shadowOpacity = 0.5;
     self.layer.shadowOffset  = CGSizeMake(0, 0);
-    
-
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -47,15 +78,14 @@
 - (void)drawHead:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
     [self reset];
     
-    float progress = 1.0;
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
     
-    CAShapeLayer *lineLayer0 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer1 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer2 = [CAShapeLayer layer];
-
-    lineLayer0.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer1.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer2.bounds = CGRectMake(-150, -150, 340, 340);
+    
+    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
     
     // path0
     UIBezierPath * path0 = [UIBezierPath bezierPath];
@@ -161,28 +191,30 @@
     
     // MARK: - add
     
-    [lineLayer0 setPath:path0.CGPath];
-    [lineLayer0 setStrokeColor:color0.CGColor];
-    [lineLayer0 setFillColor:nil];
-    [lineLayer0 setStrokeStart:0.0];
-    [lineLayer0 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer0];
-    
-    [lineLayer1 setPath:path1.CGPath];
-    [lineLayer1 setStrokeColor:color1.CGColor];
-    [lineLayer1 setFillColor:nil];
-    [lineLayer1 setStrokeStart:0.0];
-    [lineLayer1 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer1];
+    [_layer0 setLineWidth:2];
+    [_layer0 setPath:path0.CGPath];
+    [_layer0 setStrokeColor:color0.CGColor];
+    [_layer0 setFillColor:nil];
+    [_layer0 setStrokeStart:0.0];
+    [_layer0 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer0];
 
-    [lineLayer2 setPath:path2.CGPath];
-    [lineLayer2 setStrokeColor:color2.CGColor];
-    [lineLayer2 setFillColor:nil];
-    [lineLayer2 setStrokeStart:0.0];
-    [lineLayer2 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer2];
+    [_layer1 setPath:path1.CGPath];
+    [_layer1 setStrokeColor:color1.CGColor];
+    [_layer1 setFillColor:nil];
+    [_layer1 setStrokeStart:0.0];
+    [_layer1 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer1];
 
-    [self.layer setNeedsLayout];
+    [_layer2 setPath:path2.CGPath];
+    [_layer2 setStrokeColor:color2.CGColor];
+    [_layer2 setFillColor:nil];
+    [_layer2 setStrokeStart:0.0];
+    [_layer2 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer2];
+
+    [self clearsContextBeforeDrawing];
+    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
 } // drawHead
 
 
@@ -190,15 +222,15 @@
 - (void)drawPlanet:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
     
     [self reset]; // delete before drawing
-    float progress = 1.0;
     
-    CAShapeLayer *lineLayer0 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer1 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer2 = [CAShapeLayer layer];
-
-    lineLayer0.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer1.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer2.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
+    
+    
+    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
     
     // path0 planet and ring
     UIBezierPath * path0 = [UIBezierPath bezierPath];
@@ -481,44 +513,45 @@
 
     // MARK: - drawing parameters
     
-    [lineLayer0 setPath:path0.CGPath];
-    [lineLayer0 setStrokeColor:color0.CGColor];
-    [lineLayer0 setFillColor:nil];
-    [lineLayer0 setStrokeStart:0.0];
-    [lineLayer0 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer0];
-    
-    [lineLayer1 setPath:path1.CGPath];
-    [lineLayer1 setStrokeColor:color1.CGColor];
-    [lineLayer1 setFillColor:nil];
-    [lineLayer1 setStrokeStart:0.0];
-    [lineLayer1 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer1];
+    [_layer0 setLineWidth:2];
+    [_layer0 setPath:path0.CGPath];
+    [_layer0 setStrokeColor:color0.CGColor];
+    [_layer0 setFillColor:nil];
+    [_layer0 setStrokeStart:0.0];
+    [_layer0 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer0];
 
-    [lineLayer2 setPath:path2.CGPath];
-    [lineLayer2 setStrokeColor:color2.CGColor];
-    [lineLayer2 setFillColor:nil];
-    [lineLayer2 setStrokeStart:0.0];
-    [lineLayer2 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer2];
-    
+    [_layer1 setPath:path1.CGPath];
+    [_layer1 setStrokeColor:color1.CGColor];
+    [_layer1 setFillColor:nil];
+    [_layer1 setStrokeStart:0.0];
+    [_layer1 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer1];
+
+    [_layer2 setPath:path2.CGPath];
+    [_layer2 setStrokeColor:color2.CGColor];
+    [_layer2 setFillColor:nil];
+    [_layer2 setStrokeStart:0.0];
+    [_layer2 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer2];
+
     [self clearsContextBeforeDrawing];
-    [self.layer setNeedsLayout];
+    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
     
 } // drawPlanet
 
 // MARK: - drawLanscape
 - (void)drawLandscape:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
     [self reset];
-    float progress = 1.0;
     
-    CAShapeLayer *lineLayer0 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer1 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer2 = [CAShapeLayer layer];
-
-    lineLayer0.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer1.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer2.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
+    
+    
+    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
   
 //    // path3
     UIBezierPath * path0 = [UIBezierPath bezierPath];
@@ -813,27 +846,27 @@
     
     // MARK: drawing parameters
     
-    [lineLayer0 setPath:path0.CGPath];
-    [lineLayer0 setStrokeColor:color0.CGColor];
-    [lineLayer0 setFillColor:nil];
-    [lineLayer0 setStrokeStart:0.0];
-    [lineLayer0 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer0];
-    
-    [lineLayer1 setPath:path1.CGPath];
-    [lineLayer1 setStrokeColor:color1.CGColor];
-    [lineLayer1 setFillColor:nil];
-    [lineLayer1 setStrokeStart:0.0];
-    [lineLayer1 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer1];
+    [_layer0 setLineWidth:2];
+    [_layer0 setPath:path0.CGPath];
+    [_layer0 setStrokeColor:color0.CGColor];
+    [_layer0 setFillColor:nil];
+    [_layer0 setStrokeStart:0.0];
+    [_layer0 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer0];
 
-    [lineLayer2 setPath:path2.CGPath];
-    [lineLayer2 setStrokeColor:color2.CGColor];
-    [lineLayer2 setFillColor:nil];
-    [lineLayer2 setStrokeStart:0.0];
-    [lineLayer2 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer2];
+    [_layer1 setPath:path1.CGPath];
+    [_layer1 setStrokeColor:color1.CGColor];
+    [_layer1 setFillColor:nil];
+    [_layer1 setStrokeStart:0.0];
+    [_layer1 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer1];
 
+    [_layer2 setPath:path2.CGPath];
+    [_layer2 setStrokeColor:color2.CGColor];
+    [_layer2 setFillColor:nil];
+    [_layer2 setStrokeStart:0.0];
+    [_layer2 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer2];
     
     [self clearsContextBeforeDrawing];
     [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
@@ -845,15 +878,15 @@
 // MARK: - drawLanscape
 - (void)drawTree:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
     [self reset];
-    float progress = 1.0;
     
-    CAShapeLayer *lineLayer0 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer1 = [CAShapeLayer layer];
-    CAShapeLayer *lineLayer2 = [CAShapeLayer layer];
-
-    lineLayer0.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer1.bounds = CGRectMake(-150, -150, 340, 340);
-    lineLayer2.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
+    
+    
+    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
 
     // path0 крона дерева
     UIBezierPath * path0 = [UIBezierPath bezierPath];
@@ -951,32 +984,203 @@
     
     // MARK:  drawing parameters
 
-    [lineLayer0 setLineWidth:2];
-    [lineLayer0 setPath:path0.CGPath];
-    [lineLayer0 setStrokeColor:color0.CGColor];
-    [lineLayer0 setFillColor:nil];
-    [lineLayer0 setStrokeStart:0.0];
-    [lineLayer0 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer0];
+    [_layer0 setLineWidth:2];
+    [_layer0 setPath:path0.CGPath];
+    [_layer0 setStrokeColor:color0.CGColor];
+    [_layer0 setFillColor:nil];
+    [_layer0 setStrokeStart:0.0];
+    [_layer0 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer0];
 
-    [lineLayer1 setPath:path1.CGPath];
-    [lineLayer1 setStrokeColor:color1.CGColor];
-    [lineLayer1 setFillColor:nil];
-    [lineLayer1 setStrokeStart:0.0];
-    [lineLayer1 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer1];
+    [_layer1 setPath:path1.CGPath];
+    [_layer1 setStrokeColor:color1.CGColor];
+    [_layer1 setFillColor:nil];
+    [_layer1 setStrokeStart:0.0];
+    [_layer1 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer1];
 
-    [lineLayer2 setPath:path2.CGPath];
-    [lineLayer2 setStrokeColor:color2.CGColor];
-    [lineLayer2 setFillColor:nil];
-    [lineLayer2 setStrokeStart:0.0];
-    [lineLayer2 setStrokeEnd:progress];
-    [self.layer addSublayer:lineLayer2];
+    [_layer2 setPath:path2.CGPath];
+    [_layer2 setStrokeColor:color2.CGColor];
+    [_layer2 setFillColor:nil];
+    [_layer2 setStrokeStart:0.0];
+    [_layer2 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer2];
 
     [self clearsContextBeforeDrawing];
     [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
 
 } // drawTree
+
+- (void)drawMoterFucker:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
+
+    _layer0 = [CAShapeLayer layer];
+    _layer1 = [CAShapeLayer layer];
+    _layer2 = [CAShapeLayer layer];
+    
+    
+    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
+    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
+    
+    // path0
+    UIBezierPath * path0 = [UIBezierPath bezierPath];
+    [path0 moveToPoint:CGPointMake(81.5, 49)];
+    [path0 addLineToPoint:CGPointMake(97, 109)];
+    [path0 addLineToPoint:CGPointMake(109, 132)];
+    [path0 addLineToPoint:CGPointMake(126.5, 151.5)];
+    [path0 addLineToPoint:CGPointMake(153.5, 174)];
+    [path0 addLineToPoint:CGPointMake(177, 179.5)];
+    [path0 addLineToPoint:CGPointMake(213, 162)];
+    [path0 addLineToPoint:CGPointMake(240, 132)];
+    [path0 addLineToPoint:CGPointMake(248.5, 120)];
+    [path0 addLineToPoint:CGPointMake(250.5, 70.5)];
+    [path0 addLineToPoint:CGPointMake(238.5, 60.5)];
+    [path0 addLineToPoint:CGPointMake(222, 63.5)];
+    [path0 addLineToPoint:CGPointMake(211, 80.5)];
+    [path0 addLineToPoint:CGPointMake(209, 103.5)];
+    [path0 addLineToPoint:CGPointMake(213, 116)];
+
+    // MARK: - path1
+    UIBezierPath * path1 = [UIBezierPath bezierPath];
+    [path1 moveToPoint:CGPointMake(204, 120)];
+    [path1 addLineToPoint:CGPointMake(195.5, 118.5)];
+    [path1 addLineToPoint:CGPointMake(186, 120.5)];
+    [path1 addLineToPoint:CGPointMake(178, 121.5)];
+    [path1 addLineToPoint:CGPointMake(168.5, 120.5)];
+    [path1 addLineToPoint:CGPointMake(160, 119)];
+    [path1 addLineToPoint:CGPointMake(153.5, 118.5)];
+    [path1 addLineToPoint:CGPointMake(146, 120)];
+    [path1 addLineToPoint:CGPointMake(141.5, 122)];
+    [path1 addLineToPoint:CGPointMake(147.5, 124.5)];
+    [path1 addLineToPoint:CGPointMake(152, 128)];
+    [path1 addLineToPoint:CGPointMake(156.5, 133)];
+    [path1 addLineToPoint:CGPointMake(162.5, 135.5)];
+    [path1 addLineToPoint:CGPointMake(170, 136.5)];
+    [path1 addLineToPoint:CGPointMake(177, 135.5)];
+    [path1 addLineToPoint:CGPointMake(184.5, 136.5)];
+    [path1 addLineToPoint:CGPointMake(190.5, 135.5)];
+    [path1 addLineToPoint:CGPointMake(197, 131.5)];
+    [path1 addLineToPoint:CGPointMake(204, 123.5)];
+    [path1 addLineToPoint:CGPointMake(208.5, 117.5)];
+    [path1 addLineToPoint:CGPointMake(200.5, 116.5)];
+    [path1 addLineToPoint:CGPointMake(191.5, 115.5)];
+    [path1 addLineToPoint:CGPointMake(182.5, 113.5)];
+    [path1 addLineToPoint:CGPointMake(174, 113)];
+    [path1 addLineToPoint:CGPointMake(164, 114.5)];
+    [path1 addLineToPoint:CGPointMake(155, 116.5)];
+    [path1 addLineToPoint:CGPointMake(145, 117.5)];
+    [path1 addLineToPoint:CGPointMake(138, 117)];
+    [path1 addLineToPoint:CGPointMake(147.5, 111)];
+    [path1 addLineToPoint:CGPointMake(156.5, 104.5)];
+    [path1 addLineToPoint:CGPointMake(162.5, 101)];
+    [path1 addLineToPoint:CGPointMake(167.5, 102.5)];
+    [path1 addLineToPoint:CGPointMake(173, 104.5)];
+    [path1 addLineToPoint:CGPointMake(179.5, 103.5)];
+    [path1 addLineToPoint:CGPointMake(186, 102.5)];
+    [path1 addLineToPoint:CGPointMake(194.5, 104.5)];
+    [path1 addLineToPoint:CGPointMake(199.5, 109.5)];
+    [path1 addLineToPoint:CGPointMake(207, 114)];
+    
+
+    // MARK: - path2
+    UIBezierPath * path2 = [UIBezierPath bezierPath];
+    [path2 moveToPoint:CGPointMake(209.5, 122.5)];
+    [path2 addLineToPoint:CGPointMake(214, 128.5)];
+    [path2 addLineToPoint:CGPointMake(216.5, 135)];
+    [path2 addLineToPoint:CGPointMake(213, 144)];
+    [path2 addLineToPoint:CGPointMake(206, 152.5)];
+    [path2 addLineToPoint:CGPointMake(197, 159.5)];
+    [path2 addLineToPoint:CGPointMake(187.5, 152.5)];
+    [path2 addLineToPoint:CGPointMake(177, 148.5)];
+    [path2 addLineToPoint:CGPointMake(155.5, 152.5)];
+    [path2 addLineToPoint:CGPointMake(147.5, 162)];
+    [path2 addLineToPoint:CGPointMake(141, 174.5)];
+    [path2 addLineToPoint:CGPointMake(129.5, 167.5)];
+    [path2 addLineToPoint:CGPointMake(121.5, 157.5)];
+    [path2 addLineToPoint:CGPointMake(113, 148.5)];
+    [path2 addLineToPoint:CGPointMake(106, 219)];
+    [path2 addLineToPoint:CGPointMake(94.5, 227.5)];
+    [path2 addLineToPoint:CGPointMake(83.5, 234.5)];
+    [path2 addLineToPoint:CGPointMake(101, 241)];
+    [path2 addLineToPoint:CGPointMake(114.5, 249.5)];
+    [path2 addLineToPoint:CGPointMake(125, 263.5)];
+    [path2 addLineToPoint:CGPointMake(139, 281)];
+    [path2 addLineToPoint:CGPointMake(158, 299)];
+    [path2 addLineToPoint:CGPointMake(177, 305.5)];
+    [path2 addLineToPoint:CGPointMake(206, 297.5)];
+    [path2 addLineToPoint:CGPointMake(219.5, 281)];
+    [path2 addLineToPoint:CGPointMake(229.5, 259.5)];
+    [path2 addLineToPoint:CGPointMake(239, 243.5)];
+    [path2 addLineToPoint:CGPointMake(253.5, 237)];
+    [path2 addLineToPoint:CGPointMake(250.5, 221.5)];
+    [path2 addLineToPoint:CGPointMake(241, 193)];
+    [path2 addLineToPoint:CGPointMake(239, 170)];
+    [path2 addLineToPoint:CGPointMake(232, 157.5)];
+    [path2 addLineToPoint:CGPointMake(224, 165.5)];
+    [path2 addLineToPoint:CGPointMake(216.5, 174.5)];
+    [path2 addLineToPoint:CGPointMake(200, 190.5)];
+    [path2 addLineToPoint:CGPointMake(190, 205)];
+    [path2 addLineToPoint:CGPointMake(181.5, 226.5)];
+    [path2 addLineToPoint:CGPointMake(178.5, 252.5)];
+    
+    
+    
+    
+    [_layer0 setLineWidth:2];
+    [_layer0 setPath:path0.CGPath];
+    [_layer0 setStrokeColor:color0.CGColor];
+    [_layer0 setFillColor:nil];
+    [_layer0 setStrokeStart:0.0];
+    [_layer0 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer0];
+
+    [_layer1 setPath:path1.CGPath];
+    [_layer1 setStrokeColor:color1.CGColor];
+    [_layer1 setFillColor:nil];
+    [_layer1 setStrokeStart:0.0];
+    [_layer1 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer1];
+
+    [_layer2 setPath:path2.CGPath];
+    [_layer2 setStrokeColor:color2.CGColor];
+    [_layer2 setFillColor:nil];
+    [_layer2 setStrokeStart:0.0];
+    [_layer2 setStrokeEnd:0.0];
+    [self.layer addSublayer:_layer2];
+
+    [self clearsContextBeforeDrawing];
+    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
+
+}
+
+
+
+
+- (void)drawRect:(CGRect)rect {
+    NSString * currentPicture = [PlistWorker readValueForKey:@"pictureName"];
+    NSArray * pathColors = [PlistWorker readValueForKey:@"pathColors"];
+    UIColor * color0 = [UIColor colorNamed:[pathColors objectAtIndex:0]];
+    UIColor * color1 = [UIColor colorNamed:[pathColors objectAtIndex:1]];
+    UIColor * color2 = [UIColor colorNamed:[pathColors objectAtIndex:2]];
+    
+    if ([currentPicture isEqualToString: @"head"]) {
+          [self drawHead       :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"planet"]) {
+          [self drawPlanet     :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"landscape"]) {
+          [self drawLandscape  :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"tree"]) {
+          [self drawTree       :color0 :color1 :color2];
+      }
+    
+//    
+//    [self drawMoterFucker:UIColor.blueColor :UIColor.blueColor :UIColor.blueColor];
+//    [self drawTree:UIColor.blueColor :UIColor.blueColor :UIColor.blueColor];
+    
+
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
