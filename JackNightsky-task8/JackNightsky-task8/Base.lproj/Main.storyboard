@@ -90,7 +90,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
+                                                <rect key="frame" x="20.5" y="0.0" width="95" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="wl9-vK-X0c"/>
@@ -666,6 +666,9 @@
                                                     <constraint firstAttribute="height" constant="44" id="kyl-4w-AtH"/>
                                                     <constraint firstAttribute="width" constant="223" id="vMc-y5-yOC"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="sliderMove:" destination="JkM-RR-Tdw" eventType="valueChanged" id="hC7-Ie-Xmz"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoJ-9a-iRC">
                                                 <rect key="frame" x="312.5" y="0.0" width="10.5" height="44"/>
@@ -712,6 +715,10 @@
                         </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="333"/>
+                    <connections>
+                        <outlet property="currentDurationLabel" destination="ext-Rb-Yeq" id="ckH-Ik-pOj"/>
+                        <outlet property="durationSlider" destination="5gT-Zh-xPS" id="6TP-Zd-Mtk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VX3-Ip-R2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
