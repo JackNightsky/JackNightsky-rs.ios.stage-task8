@@ -10,7 +10,7 @@
 @implementation PlistWorker
 
 
-+(NSString*)readValue:(NSString*)key {
++(NSString*)readValueForKey:(NSString*)key {
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -31,7 +31,7 @@
     return value;
 }
 
-+(void)writeValue:(NSString*)key :(NSString*)value {
++(void)writeValueForKey:(NSString*)key withValue:(id)value {
     // plist
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

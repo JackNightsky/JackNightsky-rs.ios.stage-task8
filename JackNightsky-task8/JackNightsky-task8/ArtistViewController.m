@@ -114,7 +114,7 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
     if (_currentState == idle) {
         NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
-        NSString * currentPicture = [PlistWorker readValue:@"pictureName"];
+        NSString * currentPicture = [PlistWorker readValueForKey:@"pictureName"];
         
         if ([currentPicture isEqualToString: @"head"]) {
             [self.canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];

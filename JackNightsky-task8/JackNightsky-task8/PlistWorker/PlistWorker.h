@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PlistWorker : NSObject
 
-+(NSString*)readValue:(NSString*)key;
-+(void)writeValue:(NSString*)key :(NSString*)value;
++(NSString*)readValueForKey:(NSString*)key;
++(void)writeValueForKey:(NSString*)key withValue:(id)value;
 
 @end
 

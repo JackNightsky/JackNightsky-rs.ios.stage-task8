@@ -26,7 +26,7 @@ class DrawingsViewController: UIViewController {
         self.view.backgroundColor = .rsWhite;
         print("===Я родился", self)
         
-        let currentPicture: String = PlistWorker.readValue("pictureName")
+        let currentPicture: String = PlistWorker.readValue(forKey: "pictureName")
         print(currentPicture)
         
         if (currentPicture == "planet") {
@@ -79,7 +79,7 @@ class DrawingsViewController: UIViewController {
             print("Picture not changed")
         }
         
-        PlistWorker.writeValue("pictureName", sender.titleLabel?.text?.lowercased() ?? "head")
+        PlistWorker.writeValue(forKey: "pictureName", withValue: sender.titleLabel?.text?.lowercased() ?? "head")
     }
     
     /*
