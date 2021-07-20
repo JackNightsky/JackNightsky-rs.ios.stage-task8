@@ -29,6 +29,18 @@
     
 }
 
+
+
+- (IBAction)openPalette:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController * userPaletteViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserPaletteVC"];
+    
+//    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:userPaletteViewController animated:YES completion:nil];
+    NSLog(@"UserPalette isBeingPresented%d", userPaletteViewController.isBeingPresented);
+    
+}
+
 - (IBAction)draw:(id)sender {
     [_canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
     [_canvas drawPlanet :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
