@@ -9,7 +9,7 @@
 #import "ColorPalette.h"
 
 @interface ColorChooseButton ()
-@property (nonatomic) BOOL choosed;
+
 @end
 
 
@@ -39,35 +39,34 @@
     
     self.layer.cornerRadius  = 6;
     
-    [self addTarget:self
-             action:@selector(buttonTap:)
-   forControlEvents:UIControlEventTouchUpInside];
+//    [self addTarget:self
+//             action:@selector(buttonTap:)
+//   forControlEvents:UIControlEventTouchUpInside];
     
 }
 
--(void)buttonTap:(id)sender {
-    NSLog(@"color tap: %@", self.backgroundColor);
+-(void)buttonTapOn {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
-    if (self.choosed) {
-        self.choosed = NO;
 
-        CGAffineTransform transform = CGAffineTransformMakeScale(1, 1);
-        self.layer.cornerRadius = 6;
-        [self setTransform:transform];
-       
-    } else {
-        self.choosed = YES;
         CGAffineTransform transform = CGAffineTransformMakeScale(1.4, 1.4);
         self.layer.cornerRadius = 6;
         [self setTransform:transform];
-    }
     
     [UIView commitAnimations];
-//    (withDuration: 0.3,
-//                   animations: { currentDice.transform = currentDice.transform.translatedBy(x: CGFloat(self.side * directionX), y: CGFloat(self.side * directionY))})
+
 }
 
+-(void)buttonTapOff {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+
+    CGAffineTransform transform = CGAffineTransformMakeScale(1, 1);
+    self.layer.cornerRadius = 6;
+    [self setTransform:transform];
+    
+    [UIView commitAnimations];
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
      self = [super initWithCoder:aDecoder];

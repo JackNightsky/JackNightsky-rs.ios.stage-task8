@@ -9,10 +9,34 @@
 #import "UserPaletteView.h"
 #import "ColorChooseButton.h"
 #import "ColorPalette.h"
+#import "PlistWorker.h"
+
+
+
+@interface NSMutableArray (Shuffling)
+- (void)shuffle;
+@end
+
+@implementation NSMutableArray (Shuffling)
+
+- (void)shuffle
+{
+    NSUInteger count = [self count];
+    if (count <= 1) return;
+    for (NSUInteger i = 0; i < count - 1; ++i) {
+        NSInteger remainingCount = count - i;
+        NSInteger exchangeIndex = i + arc4random_uniform((u_int32_t )remainingCount);
+        [self exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
+    }
+}
+
+@end
+
 
 @interface UserPaletteViewController ()
 @property (strong, nonatomic) IBOutlet UserPaletteView *paletteView;
-
+@property (nonatomic) int colorsCount;
+@property (nonatomic) NSMutableArray * colorsArray;
 @end
 
 @implementation UserPaletteViewController
@@ -20,7 +44,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        
+    _colorsArray = @[].mutableCopy;
+    _colorsCount = 0;
 }
 
 - (void)setDefaultBackgroundColor {
@@ -32,21 +57,63 @@
 
 - (IBAction)colorChooseBtnTap:(ColorChooseButton*)sender {
     // TODO: - choose color and change view bacckground after choose
+    NSArray * colorsFromTag = @[
+        @"rsRed",          // 0
+        @"rsBlue",         // 1
+        @"rsGreen",        // 2
+        @"rsGrey",         // 3
+        @"rsLightPurple",  // 4
+        @"rsShrimple",     // 5
+        @"rsYellow",       // 6
+        @"rsCyan",         // 7
+        @"rsPink",         // 8
+        @"rsDirtBlue",     // 9
+        @"rsDirtGreen",    // 10
+        @"rsBrown"         // 11
+    ];
+   
+    if (!sender.choosed && _colorsCount < 3) {
+        _colorsCount++;
+        [sender buttonTapOn];
+        NSLog(@"_colorsCount %d", _colorsCount);
+        NSLog(@"btn choose");
+        sender.choosed = YES;
+        [UIView animateWithDuration:0.3 animations:^{
+            self.paletteView.backgroundColor = sender.backgroundColor;
+        }];
+        [NSTimer scheduledTimerWithTimeInterval:1.0
+                                         target:self
+                                       selector:@selector(setDefaultBackgroundColor)
+                                       userInfo:nil
+                                        repeats:NO];
+//        NSLog(@"sender.backgroundColor.description: %@", sender.backgroundColor.description);
+        [_colorsArray addObject: [colorsFromTag objectAtIndex:sender.tag]];
+        NSLog(@"_colorsArray: %@ ", _colorsArray);
+        
+        
+    } else if (!sender.choosed && _colorsCount == 3) {
+        
+        
+    } else {
+        if (_colorsCount > 0) {_colorsCount-- ;}
+        [sender buttonTapOff];
+        NSLog(@"btn unchoose");
+        sender.choosed = NO;
+        [_colorsArray removeObject:[colorsFromTag objectAtIndex:sender.tag]];
+        NSLog(@"_colorsArray: %@ ", _colorsArray);
+    }
     
-    [UIView animateWithDuration:0.3 animations:^{
-        self.paletteView.backgroundColor = sender.backgroundColor;
-    }];
-    [NSTimer scheduledTimerWithTimeInterval:1.0
-                                     target:self
-                                   selector:@selector(setDefaultBackgroundColor)
-                                   userInfo:nil
-                                    repeats:NO];
 }
 
 
 - (IBAction)saveChoicesAndClosePalette:(id)sender {
 //    TODO: create results and send to AtristVC
+    [_colorsArray shuffle];
+    NSLog(@"_colorsArray shuffled: %@", _colorsArray);
+    [PlistWorker writeValueForKey:@"pathColors" withValue:_colorsArray];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 /*
@@ -60,3 +127,6 @@
 */
 
 @end
+
+
+
