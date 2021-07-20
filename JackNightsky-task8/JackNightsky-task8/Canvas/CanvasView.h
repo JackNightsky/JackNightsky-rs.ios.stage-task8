@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
-
+- (void)reset;
 - (void)drawHead:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;
 - (void)drawPlanet:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;
 - (void)drawLandscape:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;

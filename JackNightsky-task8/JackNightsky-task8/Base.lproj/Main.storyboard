@@ -86,11 +86,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-Cr-BZX" userLabel="Right Stack View">
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
+                                                <rect key="frame" x="20.5" y="0.0" width="95" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
-                                                    <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="wl9-vK-X0c"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                                 <state key="normal" title="Draw">

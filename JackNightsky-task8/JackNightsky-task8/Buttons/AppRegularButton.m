@@ -67,6 +67,8 @@
     // crutch
     if (!self.isEnabled) {
         self.alpha = 0.5;
+    } else {
+        self.alpha = 1;
     }
     
     if (self.isSelected) {
