@@ -12,6 +12,8 @@
 #import "UserPaletteViewController.h"
 #import "PlistWorker.h"
 
+
+
 @interface ArtistViewController ()
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;
 @property (strong, nonatomic) IBOutlet AppRegularButton *openPaletteButton;

@@ -24,13 +24,31 @@ class DrawingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .rsWhite;
+        print("===Я родился", self)
+        
+        let currentPicture: String = PlistWorker.readValue("pictureName")
+        print(currentPicture)
+        
+        if (currentPicture == "planet") {
+            planetButton.setCurrentState(.active)
+            planetButton.isSelected = true
+        }
+        if (currentPicture == "head") {
+            headButton.setCurrentState(.active)
+        }
+        if (currentPicture == "tree") {
+            treeButton.setCurrentState(.active)
+        }
+        if (currentPicture == "landscape") {
+            lanscapeButton.setCurrentState(.active)
+        }
+        
         print("drasings self: ", self)
     }
     
 
         
     @IBAction func selectPicture(_ sender: AppRegularButton) {
-        
         
         print("sender.state", sender.state)
         planetButton.setCurrentState(.ready)
