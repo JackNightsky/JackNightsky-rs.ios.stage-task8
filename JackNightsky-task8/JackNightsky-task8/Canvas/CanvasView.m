@@ -17,7 +17,7 @@
 
 
 - (void) commonInit {
-    
+    self.backgroundColor = UIColor.rsWhite;
     self.layer.cornerRadius  = 8;
     self.layer.shadowColor   = UIColor.rsChillSky.CGColor;
     self.layer.shadowRadius  = 4;
