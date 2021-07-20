@@ -8,9 +8,14 @@
 #import "ArtistViewController.h"
 #import "ColorPalette.h"
 #import "CanvasView.h"
+#import "AppRegularButton.h"
 
 @interface ArtistViewController ()
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;
+@property (strong, nonatomic) IBOutlet AppRegularButton *openPaletteButton;
+@property (strong, nonatomic) IBOutlet AppRegularButton *openTimerButton;
+@property (strong, nonatomic) IBOutlet AppRegularButton *drawButton;
+@property (strong, nonatomic) IBOutlet AppRegularButton *shareButton;
 
 @end
 

@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="width" constant="300" id="7zx-SV-L5r"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-c0-DzN">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-c0-DzN" userLabel="Buttons">
                                 <rect key="frame" x="20" y="462" width="314" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4Zn-Kh-uOE" userLabel="Left Stack View">
@@ -134,6 +134,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="canvas" destination="cEH-1q-hec" id="aq8-V1-3tr"/>
+                        <outlet property="drawButton" destination="c7g-K8-Zge" id="vIL-cR-CeR"/>
+                        <outlet property="openPaletteButton" destination="dQc-4T-Rrn" id="5nY-Po-PwT"/>
+                        <outlet property="openTimerButton" destination="yKh-LT-E73" id="lpP-3a-SNh"/>
+                        <outlet property="shareButton" destination="sz1-Lr-bxW" id="ypp-aD-KU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
