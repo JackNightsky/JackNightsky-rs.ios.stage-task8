@@ -77,6 +77,9 @@
                                                 <state key="normal" title="Open Timer">
                                                     <color key="titleColor" name="rsLightGreenSea"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbl-sp-1tn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -84,7 +87,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
@@ -289,6 +292,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgb-UI-6R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="261" y="82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K1b-hR-Lzb">
+            <objects>
+                <viewController storyboardIdentifier="TimerVC" modalPresentationStyle="overCurrentContext" id="JkM-RR-Tdw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="okt-iK-L29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apM-UN-lOr" customClass="UserPaletteView">
+                                <rect key="frame" x="0.0" y="318" width="375" height="400"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-PC-AaG" customClass="AppRegularButton">
+                                        <rect key="frame" x="250" y="20" width="85" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="ovV-Dr-kkO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="sT7-Zy-B2p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" name="rsLightGreenSea"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="GFx-PC-AaG" firstAttribute="top" secondItem="apM-UN-lOr" secondAttribute="top" constant="20" id="Jmx-oS-npw"/>
+                                    <constraint firstAttribute="trailing" secondItem="GFx-PC-AaG" secondAttribute="trailing" constant="40" id="YsP-wW-WwQ"/>
+                                    <constraint firstItem="GFx-PC-AaG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="apM-UN-lOr" secondAttribute="leading" constant="250" id="wXk-Jb-QxO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qb7-OM-PNm"/>
+                        <constraints>
+                            <constraint firstItem="apM-UN-lOr" firstAttribute="leading" secondItem="qb7-OM-PNm" secondAttribute="leading" id="BAm-q6-2Cd"/>
+                            <constraint firstItem="apM-UN-lOr" firstAttribute="trailing" secondItem="qb7-OM-PNm" secondAttribute="trailing" id="OLm-1x-5Tg"/>
+                            <constraint firstAttribute="bottom" secondItem="apM-UN-lOr" secondAttribute="bottom" constant="-51" id="VE0-V1-V5e"/>
+                            <constraint firstItem="apM-UN-lOr" firstAttribute="top" secondItem="qb7-OM-PNm" secondAttribute="top" constant="318" id="hKn-B1-DqO"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="333"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX3-Ip-R2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="776"/>
         </scene>
     </scenes>
     <resources>

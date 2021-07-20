@@ -41,6 +41,17 @@
     
 }
 
+- (IBAction)openTimer:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController * timerViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimerVC"];
+    
+//    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:timerViewController animated:YES completion:nil];
+    NSLog(@"Timer isBeingPresented%d", timerViewController.isBeingPresented);
+    
+    
+}
+
 - (IBAction)draw:(id)sender {
     [_canvas drawHead   :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
     [_canvas drawPlanet :UIColor.rsRed :UIColor.rsBlue :UIColor.rsCyan];
