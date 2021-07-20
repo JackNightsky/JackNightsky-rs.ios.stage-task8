@@ -8,6 +8,7 @@
 #import "CanvasView.h"
 #import "ColorPalette.h"
 #import "PlistWorker.h"
+#import "ArtistViewController.h"
 
 @interface CanvasView ()
 @property (nonatomic) CAShapeLayer * layer0;
@@ -18,23 +19,47 @@
 
 @implementation CanvasView
 
--(void)changeStrokeEnd {
+
+-(void)resetProgress:(float)progress {
+    _progress = 0;
+}
+
+-(void)changeStrokeEnd{
     
     [_layer0 setStrokeEnd: _progress];
     [_layer1 setStrokeEnd: _progress];
     [_layer2 setStrokeEnd: _progress];
     
-    float drawDuration = [PlistWorker readValueForKey:@"drawDuration"].floatValue / 100;
-    NSLog(@"drawDuration: %d", drawDuration);
+    NSLog(@"drawDuration from file: %@", [PlistWorker readValueForKey:@"drawDuration"]);
+    NSString* drawDuration = [PlistWorker readValueForKey:@"drawDuration"];
+    NSLog(@"drawDuration: %f", drawDuration.floatValue / 100);
+    float duration = drawDuration.floatValue / 100;
+    NSLog(@"duration: %f", duration);
+    
+    
     if (_progress < 1) {
-        _progress += 1 * drawDuration / 60;
+        _progress += 1 / (duration * 60);
     } else {
         _progress = 1;
+        
     }
     NSLog(@"progress = %f", _progress);
-//    self setStroke
-//    [self.layer.sublayers objectAtIndex:0]
 }
+
+-(void)reverseStrokeStart {
+    
+    [_layer0 setStrokeEnd: _progress];
+    [_layer1 setStrokeEnd: _progress];
+    [_layer2 setStrokeEnd: _progress];
+    
+    if (_progress > 0.1) {
+        _progress -= 0.1;
+    } else {
+        _progress = 0;
+    }
+    NSLog(@"progress = %f", _progress);
+}
+
 
 
 -(void)reset {
@@ -49,7 +74,7 @@
 
 
 - (void) commonInit {
-    _progress = 0;
+//    _progress = 0;
     self.backgroundColor = UIColor.rsWhite;
     self.layer.cornerRadius  = 8;
     self.layer.shadowColor   = UIColor.rsChillSky.CGColor;
@@ -875,7 +900,7 @@
 
 
 
-// MARK: - drawLanscape
+// MARK: - drawTree
 - (void)drawTree:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
     [self reset];
     

@@ -660,7 +660,7 @@
                                                 <color key="textColor" name="rsBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-Zh-xPS">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-Zh-xPS">
                                                 <rect key="frame" x="47" y="0.0" width="227" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="kyl-4w-AtH"/>

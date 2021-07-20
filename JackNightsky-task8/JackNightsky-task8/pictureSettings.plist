@@ -9,7 +9,7 @@
 		<string>rsBlack</string>
 	</array>
 	<key>drawDuration</key>
-	<integer>100</integer>
+	<string>100</string>
 	<key>pictureName</key>
 	<string>head</string>
 </dict>

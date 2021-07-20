@@ -12,11 +12,6 @@
 #import "UserPaletteViewController.h"
 #import "PlistWorker.h"
 
-typedef NS_ENUM(NSInteger, ArtistVCStatement) {
-    idle,
-    draw,
-    done
-};
 
 @interface ArtistViewController ()
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;
@@ -26,8 +21,9 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
 @property (strong, nonatomic) IBOutlet AppRegularButton *shareButton;
 
 @property (nonatomic) ArtistVCStatement currentState;
--(void)setCurrentState:(ArtistVCStatement)currentState;
+
 @property (nonatomic) NSTimer * timer;
+@property (nonatomic) NSTimer * timer2;
 @end
 
 @implementation ArtistViewController
@@ -84,10 +80,6 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
 
 
 
-
-
-
-
 - (IBAction)openPalette:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController * userPaletteViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserPaletteVC"];
@@ -110,52 +102,81 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
 }
 
 
-- (IBAction)draw:(id)sender {
+- (IBAction)draw:(AppRegularButton*)sender {
+    NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
+    NSLog(@"_currentState == idle %d", _currentState == idle);
+    NSLog(@"_currentState == draw %d", _currentState == draw);
+    NSLog(@"_currentState == done %d", _currentState == done);
     
-    float drawDuration = [PlistWorker readValueForKey:@"drawDuration"].floatValue / 100;
-    
-    if (_currentState == idle) {
+    if ([_drawButton.currentTitle isEqualToString: @"Draw"] && _currentState == idle) {
         NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
-        
-        
+        [self stopTimer];
         
         float timeInterval = 1.0/60.0;
         _timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
                                          target:self.canvas
-                                       selector:@selector(changeStrokeEnd)
+                                                selector:@selector(changeStrokeEnd)
                                        userInfo:nil
                                         repeats:YES];
         
-        [NSTimer scheduledTimerWithTimeInterval:drawDuration
+        NSLog(@"xxxx");
+        _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1
                                          target:self
-                                       selector:@selector(stopTimer)
+                                       selector:@selector(checkProgress)
                                        userInfo:nil
-                                        repeats:NO];
+                                        repeats:YES];
         
-//        float current_time = _timer.timeInterval;
-//        float start_time = _timer.timeInterval;
-        [self setCurrentState:done];
+    } else if ([_drawButton.currentTitle isEqualToString: @"Reset"] && _currentState == done) {
+        [self setCurrentState:draw];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.03
+                                                 target:self.canvas
+                                               selector:@selector(reverseStrokeStart)
+                                               userInfo:nil
+                                                repeats:YES];
         
-    } else if (_currentState == draw) {
-        NSLog(@"_currentState == draw");
-        [self setCurrentState:done];
-        [self stopTimer];
-    } else if (_currentState == done) {
-        NSLog(@"_currentState == done");
-        [self setCurrentState:idle];
-        [self stopTimer];
-    } else {
-        NSLog(@"_currentState is nil");
+        NSLog(@"xxxx");
+        _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.03
+                                         target:self
+                                       selector:@selector(checkProgressReverse)
+                                       userInfo:nil
+                                        repeats:YES];
     }
     
 }
+
+
+-(void)checkProgress {
+    if (self.canvas.progress == 1) {
+        NSLog(@"self.canvas.progress %f", self.canvas.progress);
+        [self setCurrentState:done];
+        [self stopTimer];
+        [self stopTimer2];
+    }
+}
+
+-(void)checkProgressReverse {
+    if (self.canvas.progress == 0) {
+        NSLog(@"self.canvas.progress %f", self.canvas.progress);
+        [self setCurrentState:idle];
+        [self stopTimer];
+        [self stopTimer2];
+    }
+}
+
 
 -(void)stopTimer {
     if ([_timer isValid]) {
         [_timer invalidate];
     }
     _timer = nil;
+}
+
+-(void)stopTimer2 {
+    if ([_timer2 isValid]) {
+        [_timer2 invalidate];
+    }
+    _timer2 = nil;
 }
 
 

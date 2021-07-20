@@ -6,12 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArtistViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
 @property (nonatomic) float progress;
 - (void)drawMoterFucker:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2;
+- (void)resetProgress:(float)progress;
+- (void)reverseStrokeStart;
 - (void)changeStrokeEnd;
 - (void)reset;
 - (void)drawHead:(UIColor*)color1 :(UIColor*)color2 :(UIColor*)color3;

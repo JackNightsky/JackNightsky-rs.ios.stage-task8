@@ -27,7 +27,6 @@
     NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     //load from savedStock example int value
     id value = [savedStock objectForKey:key];
-//    NSLog(@"key-value: %@ : %@", key, value);
     return value;
 }
 

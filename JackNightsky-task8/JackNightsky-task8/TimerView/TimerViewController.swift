@@ -13,12 +13,15 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Timer hello")
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func saveChoiseAndCloseVC(_ sender: Any) {
-        PlistWorker.writeValue(forKey:"drawDuration", withValue: round(durationSlider.value * 100))
+        print(" round(durationSlider.value * 100)",  Int(round(durationSlider.value * 100)))
+        PlistWorker.writeValue(forKey:"drawDuration", withValue: String(Int(round(durationSlider.value * 100))))
+        print("writed value checked", PlistWorker.readValue(forKey: "drawDuration"))
         self.dismiss(animated: true, completion:nil)
     }
     
