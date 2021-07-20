@@ -14,6 +14,8 @@
 @property (nonatomic) CAShapeLayer * layer0;
 @property (nonatomic) CAShapeLayer * layer1;
 @property (nonatomic) CAShapeLayer * layer2;
+@property (nonatomic) NSString * currentPicture;
+@property (nonatomic) NSArray * pathColors;
 @end
 
 
@@ -25,6 +27,8 @@
 }
 
 -(void)changeStrokeEnd{
+//    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
+//    _pathColors = [PlistWorker readValueForKey:@"pathColors"];
     
     [_layer0 setStrokeEnd: _progress];
     [_layer1 setStrokeEnd: _progress];
@@ -48,6 +52,8 @@
 
 -(void)reverseStrokeStart {
     
+    
+    
     [_layer0 setStrokeEnd: _progress];
     [_layer1 setStrokeEnd: _progress];
     [_layer2 setStrokeEnd: _progress];
@@ -64,6 +70,8 @@
 
 -(void)reset {
     [self commonInit];
+    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
+    _pathColors = [PlistWorker readValueForKey:@"pathColors"];
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     _layer0 = [CAShapeLayer layer];
     _layer1 = [CAShapeLayer layer];
@@ -75,6 +83,7 @@
 
 - (void) commonInit {
 //    _progress = 0;
+    
     self.backgroundColor = UIColor.rsWhite;
     self.layer.cornerRadius  = 8;
     self.layer.shadowColor   = UIColor.rsChillSky.CGColor;
@@ -1182,19 +1191,17 @@
 
 
 - (void)drawRect:(CGRect)rect {
-    NSString * currentPicture = [PlistWorker readValueForKey:@"pictureName"];
-    NSArray * pathColors = [PlistWorker readValueForKey:@"pathColors"];
-    UIColor * color0 = [UIColor colorNamed:[pathColors objectAtIndex:0]];
-    UIColor * color1 = [UIColor colorNamed:[pathColors objectAtIndex:1]];
-    UIColor * color2 = [UIColor colorNamed:[pathColors objectAtIndex:2]];
+    UIColor * color0 = [UIColor colorNamed:[_pathColors objectAtIndex:0]];
+    UIColor * color1 = [UIColor colorNamed:[_pathColors objectAtIndex:1]];
+    UIColor * color2 = [UIColor colorNamed:[_pathColors objectAtIndex:2]];
     
-    if ([currentPicture isEqualToString: @"head"]) {
+    if ([_currentPicture isEqualToString: @"head"]) {
           [self drawHead       :color0 :color1 :color2];
-      } else if ([currentPicture isEqualToString: @"planet"]) {
+      } else if ([_currentPicture isEqualToString: @"planet"]) {
           [self drawPlanet     :color0 :color1 :color2];
-      } else if ([currentPicture isEqualToString: @"landscape"]) {
+      } else if ([_currentPicture isEqualToString: @"landscape"]) {
           [self drawLandscape  :color0 :color1 :color2];
-      } else if ([currentPicture isEqualToString: @"tree"]) {
+      } else if ([_currentPicture isEqualToString: @"tree"]) {
           [self drawTree       :color0 :color1 :color2];
       }
     

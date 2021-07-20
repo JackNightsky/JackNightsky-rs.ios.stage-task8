@@ -103,12 +103,14 @@
 
 
 - (IBAction)draw:(AppRegularButton*)sender {
+    
     NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
     NSLog(@"_currentState == idle %d", _currentState == idle);
     NSLog(@"_currentState == draw %d", _currentState == draw);
     NSLog(@"_currentState == done %d", _currentState == done);
     
     if ([_drawButton.currentTitle isEqualToString: @"Draw"] && _currentState == idle) {
+        [_canvas reset];
         NSLog(@"_currentState == idle");
         [self setCurrentState:draw];
         [self stopTimer];

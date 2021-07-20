@@ -59,27 +59,29 @@ class DrawingsViewController: UIViewController {
         switch sender.titleLabel?.text?.lowercased() {
         case Pictures.planet.rawValue:
             content = .planet
+            print("Choose: ", Pictures.planet)
             planetButton.setCurrentState(.active)
 
         case Pictures.head.rawValue:
             content = .head
-            print(Pictures.head)
+            print("Choose: ", Pictures.head)
             headButton.setCurrentState(.active)
             
         case Pictures.tree.rawValue:
             content = .tree
-            print(Pictures.tree)
+            print("Choose: ", Pictures.tree)
             treeButton.setCurrentState(.active)
             
         case Pictures.landscape.rawValue:
             content = .landscape
-            print(Pictures.landscape)
+            print("Choose: ", Pictures.landscape)
             lanscapeButton.setCurrentState(.active)
         default:
             print("Picture not changed")
         }
         
         PlistWorker.writeValue(forKey: "pictureName", withValue: sender.titleLabel?.text?.lowercased() ?? "head")
+        print("In plist: ", PlistWorker.readValue(forKey: "pictureName"))
     }
     
     /*
