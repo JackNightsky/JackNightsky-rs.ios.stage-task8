@@ -608,12 +608,47 @@
                                             <action selector="saveChoiseAndCloseVC:" destination="JkM-RR-Tdw" eventType="touchUpInside" id="pn5-bb-Lix"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-qh-uD5" userLabel="StackWithSlider">
+                                        <rect key="frame" x="26" y="92" width="323" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuB-W0-CrN">
+                                                <rect key="frame" x="0.0" y="0.0" width="7" height="44"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                                <color key="textColor" name="rsBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1.5" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-Zh-xPS">
+                                                <rect key="frame" x="47" y="0.0" width="227" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="kyl-4w-AtH"/>
+                                                    <constraint firstAttribute="width" constant="223" id="vMc-y5-yOC"/>
+                                                </constraints>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoJ-9a-iRC">
+                                                <rect key="frame" x="312.5" y="0.0" width="10.5" height="44"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                                <color key="textColor" name="rsBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="3ai-DR-m3a"/>
+                                            <constraint firstItem="MuB-W0-CrN" firstAttribute="leading" secondItem="r9v-qh-uD5" secondAttribute="leading" id="6AA-C3-f5l"/>
+                                            <constraint firstAttribute="width" constant="323" id="dVQ-2K-2KY"/>
+                                            <constraint firstItem="5gT-Zh-xPS" firstAttribute="top" secondItem="r9v-qh-uD5" secondAttribute="top" id="mfq-cj-bUd"/>
+                                            <constraint firstAttribute="trailing" secondItem="IoJ-9a-iRC" secondAttribute="trailing" id="oCZ-N1-mNP"/>
+                                            <constraint firstItem="5gT-Zh-xPS" firstAttribute="centerY" secondItem="r9v-qh-uD5" secondAttribute="centerY" id="sry-gU-mPs"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r9v-qh-uD5" secondAttribute="trailing" constant="26" id="63n-5C-Whh"/>
                                     <constraint firstItem="GFx-PC-AaG" firstAttribute="top" secondItem="apM-UN-lOr" secondAttribute="top" constant="20" id="Jmx-oS-npw"/>
+                                    <constraint firstItem="r9v-qh-uD5" firstAttribute="leading" secondItem="apM-UN-lOr" secondAttribute="leading" constant="26" id="Kes-b4-Z73"/>
                                     <constraint firstAttribute="trailing" secondItem="GFx-PC-AaG" secondAttribute="trailing" constant="40" id="YsP-wW-WwQ"/>
                                     <constraint firstItem="GFx-PC-AaG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="apM-UN-lOr" secondAttribute="leading" constant="250" id="wXk-Jb-QxO"/>
+                                    <constraint firstItem="r9v-qh-uD5" firstAttribute="top" secondItem="GFx-PC-AaG" secondAttribute="bottom" constant="40" id="z3O-92-7ey"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -633,6 +668,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="rsBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="rsBlue">
             <color red="0.24313725490196078" green="0.090196078431372548" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
