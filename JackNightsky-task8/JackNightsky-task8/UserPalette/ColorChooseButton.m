@@ -8,10 +8,19 @@
 #import "ColorChooseButton.h"
 #import "ColorPalette.h"
 
+@interface ColorChooseButton ()
+@property (nonatomic) BOOL choosed;
+@end
+
+
 @implementation ColorChooseButton
+
+
 
 - (void) commonInit {
     // crutch
+    self.choosed = NO;
+    
     if (!self.isEnabled) {
         self.alpha = 0.5;
     }
@@ -30,13 +39,33 @@
     
     self.layer.cornerRadius  = 6;
     
-//    self.layer.shadowColor   = [UIColor.rsBlack colorWithAlphaComponent:0.25].CGColor;
-//    self.layer.shadowRadius  = 2;
-//    self.layer.shadowOpacity = 0.5;
-//    self.layer.shadowOffset  = CGSizeMake(0, 0);
+    [self addTarget:self
+             action:@selector(buttonTap:)
+   forControlEvents:UIControlEventTouchUpInside];
     
-//    [self setTitleEdgeInsets:UIEdgeInsetsMake(5, 21, 5, 21)];
+}
+
+-(void)buttonTap:(id)sender {
+    NSLog(@"color tap: %@", self.backgroundColor);
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+    if (self.choosed) {
+        self.choosed = NO;
+
+        CGAffineTransform transform = CGAffineTransformMakeScale(1, 1);
+        self.layer.cornerRadius = 6;
+        [self setTransform:transform];
+       
+    } else {
+        self.choosed = YES;
+        CGAffineTransform transform = CGAffineTransformMakeScale(1.6, 1.6);
+        self.layer.cornerRadius = 5;
+        [self setTransform:transform];
+    }
     
+    [UIView commitAnimations];
+//    (withDuration: 0.3,
+//                   animations: { currentDice.transform = currentDice.transform.translatedBy(x: CGFloat(self.side * directionX), y: CGFloat(self.side * directionY))})
 }
 
 

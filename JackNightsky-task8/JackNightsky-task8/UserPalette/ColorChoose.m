@@ -14,10 +14,8 @@
 - (void) commonInit {
     // crutch
     
-//    [self setBounds: CGRectMake(0, 0, 40, 40)];
     
-    
-    self.layer.cornerRadius  = 6;
+    self.layer.cornerRadius  = 10;
     
     self.layer.shadowColor   = [UIColor.rsBlack colorWithAlphaComponent:0.5].CGColor;
     self.layer.shadowRadius  = 2;

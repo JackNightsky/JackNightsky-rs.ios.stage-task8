@@ -87,7 +87,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
+                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
@@ -454,7 +454,6 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="rsBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="bvE-rp-ony"/>
                                         </constraints>
@@ -630,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VX3-Ip-R2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="776"/>
+            <point key="canvasLocation" x="-132" y="775.86206896551732"/>
         </scene>
     </scenes>
     <resources>
