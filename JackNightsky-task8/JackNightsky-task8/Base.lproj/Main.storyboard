@@ -87,7 +87,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="24.5" y="0.0" width="91" height="32"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" constant="91" id="wl9-vK-X0c"/>
@@ -158,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4u-sG-AE2" customClass="UserPaletteView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4u-sG-AE2" userLabel="UserPaletteView" customClass="UserPaletteView">
                                 <rect key="frame" x="0.0" y="318" width="375" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOp-IT-ZWh" customClass="AppRegularButton">
@@ -176,12 +176,298 @@
                                             <action selector="saveChoicesAndClosePalette:" destination="OLe-fw-qu5" eventType="touchUpInside" id="KM5-gq-cbc"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zy5-od-4k0" userLabel="VerticalAxisForPaletteButtons">
+                                        <rect key="frame" x="17" y="92" width="340" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eno-ER-vT7" userLabel="TopHorizontalAxisForPaletteButtons">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-nA-S6N" userLabel="RedColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyc-v6-Lh8" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsRed"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="JPI-Xq-4dG"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="Phk-6K-lay"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" name="rsRed"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Gyc-v6-Lh8" firstAttribute="centerY" secondItem="rVb-nA-S6N" secondAttribute="centerY" id="1ja-aS-2eu"/>
+                                                            <constraint firstAttribute="width" constant="40" id="7K0-lN-c2n"/>
+                                                            <constraint firstItem="Gyc-v6-Lh8" firstAttribute="centerX" secondItem="rVb-nA-S6N" secondAttribute="centerX" id="G03-gc-hdP"/>
+                                                            <constraint firstAttribute="height" constant="40" id="fsK-7f-RWn"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3j-7b-IPx" userLabel="BlueColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFq-B3-KBQ" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="Ktd-E3-d4Z"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="uNa-a8-ROS"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="gFq-B3-KBQ" firstAttribute="centerY" secondItem="i3j-7b-IPx" secondAttribute="centerY" id="X6O-NN-pRt"/>
+                                                            <constraint firstItem="gFq-B3-KBQ" firstAttribute="centerX" secondItem="i3j-7b-IPx" secondAttribute="centerX" id="icV-iG-l8I"/>
+                                                            <constraint firstAttribute="height" constant="40" id="rla-s2-Hgo"/>
+                                                            <constraint firstAttribute="width" constant="40" id="x1Y-eI-xDw"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vy-8A-GxE" userLabel="GreenColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-PY-DxD" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsGreen"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="tKl-m1-wwW"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="zOZ-a1-I9x"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="SPh-PY-DxD" firstAttribute="centerX" secondItem="4Vy-8A-GxE" secondAttribute="centerX" id="Drw-gK-vuS"/>
+                                                            <constraint firstItem="SPh-PY-DxD" firstAttribute="centerY" secondItem="4Vy-8A-GxE" secondAttribute="centerY" id="O4q-dE-HNY"/>
+                                                            <constraint firstAttribute="width" constant="40" id="UuI-9a-KDT"/>
+                                                            <constraint firstAttribute="height" constant="40" id="cq2-g6-Cfw"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-1e-RYo" userLabel="GreyColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="180" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZa-Qi-hh8" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsGrey"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="qxn-ye-f1R"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="sJS-Ye-jlc"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="qZa-Qi-hh8" firstAttribute="centerX" secondItem="Gr9-1e-RYo" secondAttribute="centerX" id="Fit-4p-z9c"/>
+                                                            <constraint firstAttribute="width" constant="40" id="rxV-Ex-DZ5"/>
+                                                            <constraint firstItem="qZa-Qi-hh8" firstAttribute="centerY" secondItem="Gr9-1e-RYo" secondAttribute="centerY" id="smy-BX-GfO"/>
+                                                            <constraint firstAttribute="height" constant="40" id="uNe-0F-aJJ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-gf-XtU" userLabel="LightPurpleColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-oT-DWZ" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsLightPurple"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="5dF-Ra-jIZ"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="bDs-mY-y2G"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="tmf-oT-DWZ" firstAttribute="centerY" secondItem="nfq-gf-XtU" secondAttribute="centerY" id="9Fk-NJ-jt5"/>
+                                                            <constraint firstAttribute="height" constant="40" id="MVM-ze-j35"/>
+                                                            <constraint firstAttribute="width" constant="40" id="WEN-G0-VmQ"/>
+                                                            <constraint firstItem="tmf-oT-DWZ" firstAttribute="centerX" secondItem="nfq-gf-XtU" secondAttribute="centerX" id="y5t-z9-xOg"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-dN-yX6" userLabel="ShrimpleColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="300" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vou-IX-77c" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsShrimple"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="ZBn-Xg-o84"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="hgk-zy-qok"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="4uH-9z-2e0"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Xyk-P2-LdJ"/>
+                                                            <constraint firstItem="vou-IX-77c" firstAttribute="centerX" secondItem="rYp-dN-yX6" secondAttribute="centerX" id="jh1-Pc-Pz6"/>
+                                                            <constraint firstItem="vou-IX-77c" firstAttribute="centerY" secondItem="rYp-dN-yX6" secondAttribute="centerY" id="nxe-jR-QI8"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="340" id="28D-Kj-BDZ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="02r-uq-GcF" userLabel="BottomHorizontalAxisForPaletteButtons">
+                                                <rect key="frame" x="0.0" y="60" width="340" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGQ-fR-phT" userLabel="YellowColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-4v-t6t" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsYellow"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="01f-IY-DKk"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="LRZ-g5-cI4"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" name="rsRed"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="45Q-J3-qN4"/>
+                                                            <constraint firstItem="tYg-4v-t6t" firstAttribute="centerX" secondItem="iGQ-fR-phT" secondAttribute="centerX" id="ejn-Ci-Ksb"/>
+                                                            <constraint firstAttribute="height" constant="40" id="naP-u1-dHy"/>
+                                                            <constraint firstItem="tYg-4v-t6t" firstAttribute="centerY" secondItem="iGQ-fR-phT" secondAttribute="centerY" id="yuy-rn-69j"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkq-AL-jfb" userLabel="CyanColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-FP-9Dp" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="Acs-pg-zv5"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="uYw-Yf-KnD"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" name="rsCyan"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="QKc-FP-9Dp" firstAttribute="centerX" secondItem="Lkq-AL-jfb" secondAttribute="centerX" id="SHC-6m-RAB"/>
+                                                            <constraint firstAttribute="width" constant="40" id="eAh-XW-xD2"/>
+                                                            <constraint firstItem="QKc-FP-9Dp" firstAttribute="centerY" secondItem="Lkq-AL-jfb" secondAttribute="centerY" id="uiu-vP-wwv"/>
+                                                            <constraint firstAttribute="height" constant="40" id="z7E-id-Qtn"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXX-op-wou" userLabel="PinkColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54r-Y1-ysp" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsPink"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="6Tp-LP-Jpd"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="pyN-Rq-fj4"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="54r-Y1-ysp" firstAttribute="centerX" secondItem="BXX-op-wou" secondAttribute="centerX" id="4vV-RY-BmR"/>
+                                                            <constraint firstAttribute="height" constant="40" id="KUn-1V-QYM"/>
+                                                            <constraint firstItem="54r-Y1-ysp" firstAttribute="centerY" secondItem="BXX-op-wou" secondAttribute="centerY" id="N7A-GG-bgF"/>
+                                                            <constraint firstAttribute="width" constant="40" id="s6m-6w-f8P"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZI-BC-B3Q" userLabel="DirtBlueColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="180" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-gj-zck" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsDirtBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="7mw-Kj-EU1"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="yhl-f9-Gj4"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="DOG-gj-zck" firstAttribute="centerX" secondItem="pZI-BC-B3Q" secondAttribute="centerX" id="60h-mf-M62"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Lr7-Cb-1a4"/>
+                                                            <constraint firstItem="DOG-gj-zck" firstAttribute="centerY" secondItem="pZI-BC-B3Q" secondAttribute="centerY" id="OBp-Nn-vCx"/>
+                                                            <constraint firstAttribute="height" constant="40" id="a2m-kb-Cmj"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrA-EV-8BZ" userLabel="DirtGreenColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-j3-uBR" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsDirtGreen"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="aUI-MH-WXN"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="hlh-tH-SGm"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="iqf-j3-uBR" firstAttribute="centerX" secondItem="IrA-EV-8BZ" secondAttribute="centerX" id="19L-4l-MoR"/>
+                                                            <constraint firstItem="iqf-j3-uBR" firstAttribute="centerY" secondItem="IrA-EV-8BZ" secondAttribute="centerY" id="FzG-8H-cdD"/>
+                                                            <constraint firstAttribute="width" constant="40" id="hYw-iB-eL9"/>
+                                                            <constraint firstAttribute="height" constant="40" id="rkU-o9-dwc"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-sT-E32" userLabel="BrownColorChoose" customClass="ColorChoose">
+                                                        <rect key="frame" x="300" y="0.0" width="40" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Q-GB-ksr" customClass="ColorChooseButton">
+                                                                <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                                                <color key="backgroundColor" name="rsBrown"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="7o5-vw-isO"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="yex-z3-16X"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="rsWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="g1Q-GB-ksr" firstAttribute="centerY" secondItem="iVM-sT-E32" secondAttribute="centerY" id="I8c-9c-QW1"/>
+                                                            <constraint firstItem="g1Q-GB-ksr" firstAttribute="centerX" secondItem="iVM-sT-E32" secondAttribute="centerX" id="TbE-fG-UOF"/>
+                                                            <constraint firstAttribute="height" constant="40" id="bwN-1u-flP"/>
+                                                            <constraint firstAttribute="width" constant="40" id="vkm-0m-EzZ"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="340" id="NN9-2W-TbZ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="rsBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="bvE-rp-ony"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstItem="OOp-IT-ZWh" firstAttribute="top" secondItem="x4u-sG-AE2" secondAttribute="top" constant="20" id="1m3-Hv-hNK"/>
                                     <constraint firstItem="OOp-IT-ZWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x4u-sG-AE2" secondAttribute="leading" constant="250" id="R2j-f8-4U3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zy5-od-4k0" secondAttribute="trailing" constant="18" id="RSY-BG-uMy"/>
+                                    <constraint firstItem="Zy5-od-4k0" firstAttribute="leading" secondItem="x4u-sG-AE2" secondAttribute="leading" constant="17" id="To3-mJ-CD8"/>
                                     <constraint firstAttribute="trailing" secondItem="OOp-IT-ZWh" secondAttribute="trailing" constant="40" id="f9y-Hx-jsF"/>
+                                    <constraint firstItem="Zy5-od-4k0" firstAttribute="top" secondItem="OOp-IT-ZWh" secondAttribute="bottom" constant="40" id="t75-Hc-8HU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -348,8 +634,47 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="rsBlue">
+            <color red="0.24313725490196078" green="0.090196078431372548" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsBrown">
+            <color red="0.38039215686274508" green="0.058823529411764705" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsCyan">
+            <color red="0.0" green="0.68235294117647061" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsDirtBlue">
+            <color red="0.0" green="0.1803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsDirtGreen">
+            <color red="0.054901960784313725" green="0.21568627450980393" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsGreen">
+            <color red="0.0" green="0.48627450980392156" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsGrey">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="rsLightGreenSea">
             <color red="0.12941176470588237" green="0.69019607843137254" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsLightPurple">
+            <color red="0.61568627450980395" green="0.36862745098039218" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsPink">
+            <color red="1" green="0.46666666666666667" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsRed">
+            <color red="0.88627450980392153" green="0.10588235294117647" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsShrimple">
+            <color red="1" green="0.47843137254901963" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rsYellow">
+            <color red="1" green="0.67843137254901964" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

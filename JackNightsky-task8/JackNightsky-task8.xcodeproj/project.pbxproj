@@ -11,6 +11,8 @@
 		0412CB6726A67E7900229F91 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6626A67E7900229F91 /* TimerView.swift */; };
 		0412CB6A26A680B900229F91 /* UserPaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6926A680B900229F91 /* UserPaletteViewController.m */; };
 		0412CB6D26A6825200229F91 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6C26A6825200229F91 /* TimerViewController.swift */; };
+		0412CB7026A685A200229F91 /* ColorChooseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB6F26A685A200229F91 /* ColorChooseButton.m */; };
+		0412CB7326A68B3E00229F91 /* ColorChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 0412CB7226A68B3E00229F91 /* ColorChoose.m */; };
 		04178E4426A22BC1009BE089 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */; };
 		04178E4526A22BC1009BE089 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */; };
 		04178E4926A31FC1009BE089 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04178E4826A31FC1009BE089 /* CanvasView.m */; };
@@ -33,6 +35,10 @@
 		0412CB6826A680B900229F91 /* UserPaletteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserPaletteViewController.h; sourceTree = "<group>"; };
 		0412CB6926A680B900229F91 /* UserPaletteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserPaletteViewController.m; sourceTree = "<group>"; };
 		0412CB6C26A6825200229F91 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		0412CB6E26A685A200229F91 /* ColorChooseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorChooseButton.h; sourceTree = "<group>"; };
+		0412CB6F26A685A200229F91 /* ColorChooseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChooseButton.m; sourceTree = "<group>"; };
+		0412CB7126A68B3E00229F91 /* ColorChoose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorChoose.h; sourceTree = "<group>"; };
+		0412CB7226A68B3E00229F91 /* ColorChoose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChoose.m; sourceTree = "<group>"; };
 		04178E4226A22BC1009BE089 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04178E4326A22BC1009BE089 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		04178E4726A31FC1009BE089 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 				0412CB6826A680B900229F91 /* UserPaletteViewController.h */,
 				0412CB6926A680B900229F91 /* UserPaletteViewController.m */,
 				0412CB6126A67A7A00229F91 /* UserPaletteView */,
+				0412CB6E26A685A200229F91 /* ColorChooseButton.h */,
+				0412CB6F26A685A200229F91 /* ColorChooseButton.m */,
+				0412CB7126A68B3E00229F91 /* ColorChoose.h */,
+				0412CB7226A68B3E00229F91 /* ColorChoose.m */,
 			);
 			path = UserPalette;
 			sourceTree = "<group>";
@@ -251,9 +261,11 @@
 				0439057626A41AF800F464DD /* DrawingsButton.swift in Sources */,
 				0412CB6D26A6825200229F91 /* TimerViewController.swift in Sources */,
 				0412CB6426A67AE500229F91 /* UserPaletteView.m in Sources */,
+				0412CB7026A685A200229F91 /* ColorChooseButton.m in Sources */,
 				0412CB6A26A680B900229F91 /* UserPaletteViewController.m in Sources */,
 				04178E4926A31FC1009BE089 /* CanvasView.m in Sources */,
 				04178E4C26A3658B009BE089 /* AppRegularButton.m in Sources */,
+				0412CB7326A68B3E00229F91 /* ColorChoose.m in Sources */,
 				0465B16926A1784F003E4817 /* ColorPalette.m in Sources */,
 				0465B16126A16B27003E4817 /* DrawingsViewController.swift in Sources */,
 				04BD63D926A0D3D30027BD94 /* main.m in Sources */,
