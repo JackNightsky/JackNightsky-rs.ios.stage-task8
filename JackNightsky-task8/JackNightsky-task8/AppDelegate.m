@@ -32,11 +32,11 @@
     [self.window makeKeyAndVisible];
     
 // TODO: - set default parameters on start application
-//    if (YES) {
-//        [PlistWorker writeValueForKey:@"pictureName" withValue:@"head"];
-//        [PlistWorker writeValueForKey:@"drawDuration" withValue:@1000];
-//        [PlistWorker writeValueForKey:@"pathColors" withValue:@[@"rsBlack", @"rsBlack", @"rsBlack"]];
-//    }
+    if (YES) {
+        [PlistWorker writeValueForKey:@"pictureName" withValue:@"head"];
+        [PlistWorker writeValueForKey:@"drawDuration" withValue:@100];
+        [PlistWorker writeValueForKey:@"pathColors" withValue:@[@"rsBlack", @"rsBlack", @"rsBlack"]];
+    }
     
     return YES;
 }
