@@ -34,7 +34,7 @@
 // TODO: - set default parameters on start application
     if (YES) {
         [PlistWorker writeValueForKey:@"pictureName" withValue:@"head"];
-        [PlistWorker writeValueForKey:@"drawDuration" withValue:@100];
+        [PlistWorker writeValueForKey:@"drawDuration" withValue:@"100"];
         [PlistWorker writeValueForKey:@"pathColors" withValue:@[@"rsBlack", @"rsBlack", @"rsBlack"]];
     }
     
