@@ -17,8 +17,9 @@ class TimerViewController: UIViewController {
             durationSlider.minimumValue = 1
             durationSlider.maximumValue = 5
         
-        let startDuration = Float(Int(PlistWorker.readValue(forKey: "drawDuration")) ?? 100 / 100)
-        durationSlider.value = 3
+        let startDuration = Float(PlistWorker.readValue(forKey: "drawDuration"))! / 100
+        print("startDuration", startDuration)
+        durationSlider.value = startDuration
         
 //        let startDurationRounded = round(durationSlider.value * 100) / 100
         currentDurationLabel.text = String("\(startDuration) s")
