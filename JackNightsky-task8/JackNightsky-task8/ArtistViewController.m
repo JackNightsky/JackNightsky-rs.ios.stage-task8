@@ -11,6 +11,7 @@
 #import "AppRegularButton.h"
 #import "UserPaletteViewController.h"
 #import "PlistWorker.h"
+#import "JackNightsky_task8-Swift.h"
 
 
 @interface ArtistViewController ()
@@ -21,21 +22,35 @@
 @property (strong, nonatomic) IBOutlet AppRegularButton *shareButton;
 
 @property (nonatomic) ArtistVCStatement currentState;
+@property (nonatomic, nonnull) NSString *curentPicture;
 
 @property (nonatomic) NSTimer * timer;
 @property (nonatomic) NSTimer * timer2;
+
+
 @end
 
-@implementation ArtistViewController
+
+@implementation ArtistViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.rsWhite;
     // Do any additional setup after loading the view.
     [self setCurrentState:idle];
+    self.curentPicture = @"head";
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"CONTROLLER %@", segue.destinationViewController);
+    
+    DrawingsViewController * drawings = segue.destinationViewController;
+    drawings.delegate = self;
+}
 
+-(void)setDrawingPicture:(NSString *)picture {
+    self.curentPicture = picture;
+}
 
 - (void)setCurrentState:(ArtistVCStatement)currentState {
     switch (currentState) {
@@ -104,6 +119,7 @@
 
 - (IBAction)draw:(AppRegularButton*)sender {
     
+    [self.canvas setCurrentPicture:self.curentPicture];
 //    NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
 //    NSLog(@"_currentState == idle %d", _currentState == idle);
 //    NSLog(@"_currentState == draw %d", _currentState == draw);
@@ -121,7 +137,6 @@
                                        userInfo:nil
                                         repeats:YES];
         
-//        NSLog(@"xxxx");
         _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1
                                          target:self
                                        selector:@selector(checkProgress)
@@ -136,7 +151,6 @@
                                                userInfo:nil
                                                 repeats:YES];
         
-//        NSLog(@"xxxx");
         _timer2 = [NSTimer scheduledTimerWithTimeInterval:0.03
                                          target:self
                                        selector:@selector(checkProgressReverse)

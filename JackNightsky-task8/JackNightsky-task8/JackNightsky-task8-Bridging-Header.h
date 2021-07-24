@@ -5,3 +5,4 @@
 #import "ColorPalette.h"
 #import "AppRegularButton.h"
 #import "PlistWorker.h"
+#import "ArtistViewController.h"

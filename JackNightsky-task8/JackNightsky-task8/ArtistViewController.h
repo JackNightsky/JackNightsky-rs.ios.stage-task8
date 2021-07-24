@@ -7,6 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DrawingsProtocol <NSObject>
+
+-(void)setDrawingPicture:(NSString*)picture;
+
+@end
+
+
 typedef NS_ENUM(NSInteger, ArtistVCStatement) {
     idle,
     draw,
@@ -14,7 +21,8 @@ typedef NS_ENUM(NSInteger, ArtistVCStatement) {
 };
 
 
-@interface ArtistViewController : UIViewController
+@interface ArtistViewController : UIViewController <DrawingsProtocol>
+
 
 -(void)setCurrentState:(ArtistVCStatement)currentState;
 @end

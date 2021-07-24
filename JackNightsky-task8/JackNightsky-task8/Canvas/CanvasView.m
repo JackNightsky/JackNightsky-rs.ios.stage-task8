@@ -14,13 +14,16 @@
 @property (nonatomic) CAShapeLayer * layer0;
 @property (nonatomic) CAShapeLayer * layer1;
 @property (nonatomic) CAShapeLayer * layer2;
-@property (nonatomic) NSString * currentPicture;
+@property (nonatomic, nonnull) NSString * currentPicture;
 @property (nonatomic) NSArray * pathColors;
 @end
 
 
 @implementation CanvasView
 
+-(void)setCurrentPicture:(NSString *)currentPicture {
+    _currentPicture = currentPicture;
+}
 
 -(void)resetProgress:(float)progress {
     _progress = 0;
@@ -70,13 +73,13 @@
 
 -(void)reset {
     [self commonInit];
-    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
+//    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
     _pathColors = [PlistWorker readValueForKey:@"pathColors"];
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     _layer0 = [CAShapeLayer layer];
     _layer1 = [CAShapeLayer layer];
     _layer2 = [CAShapeLayer layer];
-//    _progress = 0;
+
     [self setNeedsDisplay];
 }
 

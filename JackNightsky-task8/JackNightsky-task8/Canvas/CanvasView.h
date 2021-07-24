@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
 @property (nonatomic) float progress;
+- (void)setCurrentPicture:(NSString*)currentPicture;
 - (void)drawMoterFucker:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2;
 - (void)resetProgress:(float)progress;
 - (void)reverseStrokeStart;

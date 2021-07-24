@@ -7,12 +7,14 @@
 
 import UIKit
 
+
+
 class DrawingsViewController: UIViewController {
     @IBOutlet var planetButton:   AppRegularButton!
     @IBOutlet var headButton:     AppRegularButton!
     @IBOutlet var treeButton:     AppRegularButton!
     @IBOutlet var lanscapeButton: AppRegularButton!
-    
+    @objc weak var delegate: DrawingsProtocol!
     
     enum Pictures : String {
         case planet, head, tree, landscape
@@ -24,7 +26,7 @@ class DrawingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .rsWhite;
-        print("===Я родился", self)
+//        print("===Я родился", self)
         
         let currentPicture: String = PlistWorker.readValue(forKey: "pictureName")
         print(currentPicture)
@@ -81,6 +83,10 @@ class DrawingsViewController: UIViewController {
         
         PlistWorker.writeValue(forKey: "pictureName", withValue: sender.titleLabel?.text?.lowercased() ?? "head")
         print("In plist: ", PlistWorker.readValue(forKey: "pictureName"))
+        
+        
+        delegate?.setDrawingPicture(sender.titleLabel?.text?.lowercased() ?? "head")
+        
     }
     
     /*
