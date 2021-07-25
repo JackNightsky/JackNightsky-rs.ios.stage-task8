@@ -6,7 +6,7 @@
 //
 
 #import "UserPaletteView.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 
 @implementation UserPaletteView
 

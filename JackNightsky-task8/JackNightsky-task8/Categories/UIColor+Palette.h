@@ -10,11 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ColorPalette : NSObject
-
-@end
-
-@interface UIColor (CustomColors)
+@interface UIColor (Palette)
 
 // App interface palette
 @property(class, nonatomic, readonly) UIColor *rsBlack;

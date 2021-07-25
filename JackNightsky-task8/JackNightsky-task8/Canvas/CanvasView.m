@@ -6,7 +6,7 @@
 //
 
 #import "CanvasView.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 #import "PlistWorker.h"
 #import "ArtistViewController.h"
 

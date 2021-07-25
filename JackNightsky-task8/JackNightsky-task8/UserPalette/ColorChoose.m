@@ -6,7 +6,7 @@
 //
 
 #import "ColorChoose.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 
 @implementation ColorChoose
 

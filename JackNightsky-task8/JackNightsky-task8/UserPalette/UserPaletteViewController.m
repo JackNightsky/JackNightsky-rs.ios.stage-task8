@@ -8,7 +8,7 @@
 #import "UserPaletteViewController.h"
 #import "UserPaletteView.h"
 #import "ColorChooseButton.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 #import "PlistWorker.h"
 
 

@@ -6,7 +6,7 @@
 //
 
 #import "ColorChooseButton.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 
 @interface ColorChooseButton ()
 

@@ -6,7 +6,7 @@
 //
 
 #import "ArtistViewController.h"
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 #import "CanvasView.h"
 #import "AppRegularButton.h"
 #import "UserPaletteViewController.h"

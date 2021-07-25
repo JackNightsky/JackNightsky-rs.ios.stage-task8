@@ -5,13 +5,9 @@
 //  Created by Jack on 16.07.21.
 //
 
-#import "ColorPalette.h"
+#import "UIColor+Palette.h"
 
-@implementation ColorPalette
-
-@end
-
-@implementation UIColor (CustomColors)
+@implementation UIColor (Palette)
 
 // App interface palette
 +(UIColor *) rsBlack         { return [UIColor colorNamed:@"rsBlack"]; }
