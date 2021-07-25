@@ -12,9 +12,6 @@
 
 
 - (void) commonInit {
-    // crutch
-    
-    
     self.layer.cornerRadius  = 10;
     
     self.layer.shadowColor   = [UIColor.rsBlack colorWithAlphaComponent:0.5].CGColor;
@@ -30,8 +27,6 @@
      if (self) {
          [self commonInit];
          
-         // Set title color for states
- 
      }
      return self;
  }

@@ -15,11 +15,8 @@ typedef NS_ENUM(NSInteger, CurrentStatement) {
 };
 
 @interface AppRegularButton : UIButton
-
 @property (nonatomic, readonly) CurrentStatement currentState;
-
 -(void)setCurrentState:(CurrentStatement)currentState;
-
 @end
 
 NS_ASSUME_NONNULL_END

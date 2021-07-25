@@ -6,51 +6,32 @@
 //
 
 #import "ArtistViewController.h"
-#import "UIColor+Palette.h"
 #import "CanvasView.h"
 #import "AppRegularButton.h"
+#import "UIColor+Palette.h"
 #import "UserPaletteViewController.h"
-#import "PlistWorker.h"
 #import "JackNightsky_task8-Swift.h"
+#import "PlistWorker.h"
 
 
 @interface ArtistViewController ()
+
+@property (nonatomic) ArtistVCStatement currentState;
+@property (nonatomic, nonnull) NSString *curentPicture;
+
 @property (strong, nonatomic) IBOutlet CanvasView *canvas;
 @property (strong, nonatomic) IBOutlet AppRegularButton *openPaletteButton;
 @property (strong, nonatomic) IBOutlet AppRegularButton *openTimerButton;
 @property (strong, nonatomic) IBOutlet AppRegularButton *drawButton;
 @property (strong, nonatomic) IBOutlet AppRegularButton *shareButton;
 
-@property (nonatomic) ArtistVCStatement currentState;
-@property (nonatomic, nonnull) NSString *curentPicture;
-
 @property (nonatomic) NSTimer * timer;
 @property (nonatomic) NSTimer * timer2;
 
-
-@end
+@end // interface ArtistViewController ()
 
 
 @implementation ArtistViewController 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = UIColor.rsWhite;
-    // Do any additional setup after loading the view.
-    [self setCurrentState:idle];
-    self.curentPicture = @"head";
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"CONTROLLER %@", segue.destinationViewController);
-    
-    DrawingsViewController * drawings = segue.destinationViewController;
-    drawings.delegate = self;
-}
-
--(void)setDrawingPicture:(NSString *)picture {
-    self.curentPicture = picture;
-}
 
 - (void)setCurrentState:(ArtistVCStatement)currentState {
     switch (currentState) {
@@ -64,18 +45,17 @@
             [_openTimerButton setEnabled:YES];
             [_drawButton setEnabled:YES];
             [_shareButton setEnabled:NO];
-            
             break;
             
         case draw:
             _currentState = draw;
+            
             [_openPaletteButton setEnabled:NO];
             [_openTimerButton setEnabled:NO];
             [_drawButton setEnabled:NO];
             [_shareButton setEnabled:NO];
-            
-            
             break;
+            
         case done:
             _currentState = done;
             
@@ -85,45 +65,51 @@
             [_openTimerButton   setEnabled:NO];
             [_drawButton        setEnabled:YES];
             [_shareButton       setEnabled:YES];
-            
-            
-            break;
-        default:
             break;
     }
 }
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Set appearance view controller
+    self.view.backgroundColor = UIColor.rsWhite;
+    [self setCurrentState:idle];
+    
+    self.curentPicture = @"head";
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DrawingsViewController * drawings = segue.destinationViewController;
+    drawings.delegate = self;
+}
+
+
+-(void)setDrawingPicture:(NSString *)picture {
+    self.curentPicture = picture;
+}
 
 
 - (IBAction)openPalette:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController * userPaletteViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserPaletteVC"];
     
-//    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:userPaletteViewController animated:YES completion:nil];
-//    NSLog(@"UserPalette isBeingPresented%d", userPaletteViewController.isBeingPresented);
-    
 }
+
 
 - (IBAction)openTimer:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController * timerViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimerVC"];
     
-//    userPaletteViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:timerViewController animated:YES completion:nil];
-//    NSLog(@"Timer isBeingPresented%d", timerViewController.isBeingPresented);
-    
-    
 }
 
 
 - (IBAction)draw:(AppRegularButton*)sender {
     
     [self.canvas setCurrentPicture:self.curentPicture];
-//    NSLog(@"_drawButton.currentTitle %@", _drawButton.currentTitle);
-//    NSLog(@"_currentState == idle %d", _currentState == idle);
-//    NSLog(@"_currentState == draw %d", _currentState == draw);
-//    NSLog(@"_currentState == done %d", _currentState == done);
     
     if ([_drawButton.currentTitle isEqualToString: @"Draw"] && _currentState == idle) {
         [_canvas reset];
@@ -157,22 +143,20 @@
                                        userInfo:nil
                                         repeats:YES];
     }
-    
 }
 
 
 -(void)checkProgress {
     if (self.canvas.progress == 1) {
-//        NSLog(@"self.canvas.progress %f", self.canvas.progress);
         [self setCurrentState:done];
         [self stopTimer];
         [self stopTimer2];
     }
 }
 
+
 -(void)checkProgressReverse {
     if (self.canvas.progress == 0) {
-//        NSLog(@"self.canvas.progress %f", self.canvas.progress);
         [self setCurrentState:idle];
         [self stopTimer];
         [self stopTimer2];
@@ -195,8 +179,4 @@
 }
 
 
-
-
-
-
-@end
+@end // implementation ArtistViewController

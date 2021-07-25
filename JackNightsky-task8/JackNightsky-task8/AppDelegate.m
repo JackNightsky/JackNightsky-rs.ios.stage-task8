@@ -18,8 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -31,7 +29,7 @@
     self.window = window;
     [self.window makeKeyAndVisible];
     
-// TODO: - set default parameters on start application
+    // MARK: - set default parameters on start application
     if (YES) {
         [PlistWorker writeValueForKey:@"pictureName" withValue:@"head"];
         [PlistWorker writeValueForKey:@"drawDuration" withValue:@"100"];

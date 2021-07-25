@@ -25,24 +25,11 @@
         self.alpha = 0.5;
     }
     
-//    [self setBounds: CGRectMake(0, 0, 40, 40)];
-    
     self.titleLabel.text = @"";
-    
     self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:0];
-    
-    // Button appearance for state NORMAL
-//    self.backgroundColor = UIColor.rsBlue;
-//    self.titleLabel.backgroundColor = UIColor.rsBlue;
-    
     [self setTitleColor:UIColor.rsLightGreenSea forState:UIControlStateNormal];
     
     self.layer.cornerRadius  = 6;
-    
-//    [self addTarget:self
-//             action:@selector(buttonTap:)
-//   forControlEvents:UIControlEventTouchUpInside];
-    
 }
 
 -(void)buttonTapOn {

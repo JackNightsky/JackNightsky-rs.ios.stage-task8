@@ -24,34 +24,26 @@ class DrawingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Set appearance view controller
         self.view.backgroundColor = .rsWhite;
-//        print("===Я родился", self)
         
         let currentPicture: String = PlistWorker.readValue(forKey: "pictureName")
-        print(currentPicture)
         
         if (currentPicture == "planet") {
             planetButton.setCurrentState(.active)
-        }
-        if (currentPicture == "head") {
+        } else if (currentPicture == "head") {
             headButton.setCurrentState(.active)
-        }
-        if (currentPicture == "tree") {
+        } else if (currentPicture == "tree") {
             treeButton.setCurrentState(.active)
-        }
-        if (currentPicture == "landscape") {
+        } else if (currentPicture == "landscape") {
             lanscapeButton.setCurrentState(.active)
         }
-        
-        print("drasings self: ", self)
     }
     
 
         
     @IBAction func selectPicture(_ sender: AppRegularButton) {
-        
-        print("sender.state", sender.state)
+        // Unset active state from all button. Without this step - does not worked
         planetButton.setCurrentState(.ready)
         headButton.setCurrentState(.ready)
         treeButton.setCurrentState(.ready)
@@ -60,33 +52,26 @@ class DrawingsViewController: UIViewController {
         switch sender.titleLabel?.text?.lowercased() {
         case Pictures.planet.rawValue:
             content = .planet
-            print("Choose: ", Pictures.planet)
             planetButton.setCurrentState(.active)
 
         case Pictures.head.rawValue:
             content = .head
-            print("Choose: ", Pictures.head)
             headButton.setCurrentState(.active)
             
         case Pictures.tree.rawValue:
             content = .tree
-            print("Choose: ", Pictures.tree)
             treeButton.setCurrentState(.active)
             
         case Pictures.landscape.rawValue:
             content = .landscape
-            print("Choose: ", Pictures.landscape)
             lanscapeButton.setCurrentState(.active)
         default:
             print("Picture not changed")
         }
         
         PlistWorker.writeValue(forKey: "pictureName", withValue: sender.titleLabel?.text?.lowercased() ?? "head")
-        print("In plist: ", PlistWorker.readValue(forKey: "pictureName"))
-        
         
         delegate?.setDrawingPicture(sender.titleLabel?.text?.lowercased() ?? "head")
-        
     }
     
     /*

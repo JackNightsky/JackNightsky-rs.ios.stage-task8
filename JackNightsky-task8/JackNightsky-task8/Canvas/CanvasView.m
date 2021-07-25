@@ -226,8 +226,6 @@
     [path2 addLineToPoint:CGPointMake(178.5, 252.5)];
     
     
-    // MARK: - add
-    
     [_layer0 setLineWidth:2];
     [_layer0 setPath:path0.CGPath];
     [_layer0 setStrokeColor:color0.CGColor];
@@ -251,7 +249,7 @@
     [self.layer addSublayer:_layer2];
 
     [self clearsContextBeforeDrawing];
-    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
+    [self.layer setNeedsLayout];
 } // drawHead
 
 
@@ -906,7 +904,7 @@
     [self.layer addSublayer:_layer2];
     
     [self clearsContextBeforeDrawing];
-    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
+    [self.layer setNeedsLayout];
 
 } // drawLandscape
 
@@ -919,13 +917,8 @@
     _layer0 = [CAShapeLayer layer];
     _layer1 = [CAShapeLayer layer];
     _layer2 = [CAShapeLayer layer];
-    
-    
-    _layer0.bounds = CGRectMake(-150, -150, 340, 340);
-    _layer1.bounds = CGRectMake(-150, -150, 340, 340);
-    _layer2.bounds = CGRectMake(-150, -150, 340, 340);
 
-    // path0 крона дерева
+    // Crown of a tree
     UIBezierPath * path0 = [UIBezierPath bezierPath];
     [path0 moveToPoint:CGPointMake( 233.19, 85.76)];
     [path0 addCurveToPoint:CGPointMake(237, 76.5) controlPoint1: CGPointMake(235.57, 83.25) controlPoint2: CGPointMake(237, 80.02)];
@@ -987,7 +980,6 @@
     [path0 closePath];
 
     
-    // path2
     UIBezierPath * path1 = [UIBezierPath bezierPath];
     [path1 moveToPoint:CGPointMake( 102, 270.5)];
     [path1 addCurveToPoint:CGPointMake(163.5, 207.5) controlPoint1: CGPointMake(121.83, 264.67) controlPoint2: CGPointMake(161.9, 243.9)];
@@ -1019,8 +1011,7 @@
     [path2 addCurveToPoint:CGPointMake(261.5, 268) controlPoint1: CGPointMake(238.33, 263.33) controlPoint2: CGPointMake(261.5, 259.2)];
     [path2 addCurveToPoint:CGPointMake(244.5, 276) controlPoint1: CGPointMake(261.5, 276.8) controlPoint2: CGPointMake(245.83, 275.17)];
     
-    // MARK:  drawing parameters
-
+    
     [_layer0 setLineWidth:2];
     [_layer0 setPath:path0.CGPath];
     [_layer0 setStrokeColor:color0.CGColor];
@@ -1042,10 +1033,6 @@
     [_layer2 setStrokeStart:0.0];
     [_layer2 setStrokeEnd:0.0];
     [self.layer addSublayer:_layer2];
-
-    [self clearsContextBeforeDrawing];
-    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
-
 } // drawTree
 
 - (void)drawMoterFucker:(UIColor*)color0 :(UIColor*)color1 :(UIColor*)color2 {
@@ -1161,8 +1148,6 @@
     [path2 addLineToPoint:CGPointMake(178.5, 252.5)];
     
     
-    
-    
     [_layer0 setLineWidth:2];
     [_layer0 setPath:path0.CGPath];
     [_layer0 setStrokeColor:color0.CGColor];
@@ -1184,16 +1169,11 @@
     [_layer2 setStrokeStart:0.0];
     [_layer2 setStrokeEnd:0.0];
     [self.layer addSublayer:_layer2];
-
-    [self clearsContextBeforeDrawing];
-    [self.layer setNeedsLayout]; // мб поможет обновлять лэер в будущем.
-
 }
 
 
-
-
 - (void)drawRect:(CGRect)rect {
+
     UIColor * color0 = [UIColor colorNamed:[_pathColors objectAtIndex:0]];
     UIColor * color1 = [UIColor colorNamed:[_pathColors objectAtIndex:1]];
     UIColor * color2 = [UIColor colorNamed:[_pathColors objectAtIndex:2]];
@@ -1207,22 +1187,7 @@
       } else if ([_currentPicture isEqualToString: @"tree"]) {
           [self drawTree       :color0 :color1 :color2];
       }
-    
-//    
-//    [self drawMoterFucker:UIColor.blueColor :UIColor.blueColor :UIColor.blueColor];
-//    [self drawTree:UIColor.blueColor :UIColor.blueColor :UIColor.blueColor];
-    
-
 }
 
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
-@end
+@end // implementation CanvasView

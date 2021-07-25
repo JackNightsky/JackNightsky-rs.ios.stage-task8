@@ -12,7 +12,6 @@
 
 - (void) commonInit {
     self.backgroundColor = UIColor.rsWhite;
-//    self.backgroundColor = UIColor.rsShrimple;
     
     self.layer.cornerRadius  = 40;
     

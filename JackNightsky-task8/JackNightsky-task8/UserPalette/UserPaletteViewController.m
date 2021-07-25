@@ -75,8 +75,6 @@
     if (!sender.choosed && _colorsCount < 3) {
         _colorsCount++;
         [sender buttonTapOn];
-        NSLog(@"_colorsCount %d", _colorsCount);
-        NSLog(@"btn choose");
         sender.choosed = YES;
         [UIView animateWithDuration:0.3 animations:^{
             self.paletteView.backgroundColor = sender.backgroundColor;
@@ -86,13 +84,10 @@
                                        selector:@selector(setDefaultBackgroundColor)
                                        userInfo:nil
                                         repeats:NO];
-//        NSLog(@"sender.backgroundColor.description: %@", sender.backgroundColor.description);
+
         [_colorsArray addObject: [colorsFromTag objectAtIndex:sender.tag]];
-        NSLog(@"_colorsArray: %@ ", _colorsArray);
-        
         
     } else if (!sender.choosed && _colorsCount == 3) {
-        
         
     } else {
         if (_colorsCount > 0) {_colorsCount-- ;}
