@@ -12,6 +12,7 @@
 #import "UserPaletteViewController.h"
 #import "JackNightsky_task8-Swift.h"
 #import "PlistWorker.h"
+#import <LinkPresentation/LPLinkMetadata.h>
 
 
 @interface ArtistViewController ()
@@ -177,6 +178,31 @@
     }
     _timer2 = nil;
 }
+
+
+- (IBAction)share:(id)sender {
+    UIImage *image = [self.canvas saveAsImage];
+    NSArray * theItems = @[self, image];
+
+    UIActivityViewController *activityViewControntroller = [[UIActivityViewController alloc]
+                                                    initWithActivityItems:theItems
+                                                    applicationActivities:nil];
+    
+    [self presentViewController:activityViewControntroller animated:YES completion:nil];
+}
+
+
+- (LPLinkMetadata *)activityViewControllerLinkMetadata:(UIActivityViewController *)activityViewController API_AVAILABLE(ios(13.0)) {
+    UIImage * justAnImage = [UIImage imageNamed:@"IconToActivityVC"];
+    NSItemProvider * imageProvider = [[NSItemProvider alloc] initWithObject:justAnImage];
+    LPLinkMetadata * metaData = [[LPLinkMetadata alloc] init];
+    metaData.imageProvider = imageProvider;
+    return metaData;
+}
+
+
+
+
 
 
 @end // implementation ArtistViewController

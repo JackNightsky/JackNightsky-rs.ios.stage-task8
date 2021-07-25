@@ -1190,4 +1190,12 @@
 }
 
 
+- (UIImage *) saveAsImage {
+    UIGraphicsImageRenderer *render = [[UIGraphicsImageRenderer alloc] initWithBounds:self.bounds];
+    return [render imageWithActions:^(UIGraphicsImageRendererContext * _Nonnull rendererContext) {
+        [self.layer renderInContext:rendererContext.CGContext];
+    }];
+}
+
+
 @end // implementation CanvasView
