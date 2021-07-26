@@ -95,7 +95,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="20.5" y="0.0" width="95" height="32"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="wl9-vK-X0c"/>
@@ -380,7 +380,7 @@
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-FP-9Dp" customClass="ColorChooseButton">
                                                                 <rect key="frame" x="8" y="8" width="24" height="24"/>
-                                                                <color key="backgroundColor" name="rsBlue"/>
+                                                                <color key="backgroundColor" name="rsCyan"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="24" id="Acs-pg-zv5"/>
                                                                     <constraint firstAttribute="width" constant="24" id="uYw-Yf-KnD"/>
@@ -529,6 +529,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="333"/>
                     <connections>
+                        <outlet property="paletteStackWithStack" destination="Zy5-od-4k0" id="il9-Ct-I6I"/>
                         <outlet property="paletteView" destination="x4u-sG-AE2" id="1EB-D1-aUY"/>
                     </connections>
                 </viewController>

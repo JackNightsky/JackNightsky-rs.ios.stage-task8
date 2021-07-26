@@ -8,6 +8,7 @@
 #import "UserPaletteViewController.h"
 #import "UserPaletteView.h"
 #import "ColorChooseButton.h"
+#import "ColorChoose.h"
 #import "UIColor+Palette.h"
 #import "PlistWorker.h"
 
@@ -34,30 +35,26 @@
 
 
 @interface UserPaletteViewController ()
+@property (strong, nonatomic) IBOutlet UIStackView *paletteStackWithStack;
 @property (strong, nonatomic) IBOutlet UserPaletteView *paletteView;
 @property (nonatomic) int colorsCount;
-@property (nonatomic) NSMutableArray * colorsArray;
+@property (nonatomic, nonnull) NSMutableArray * colorsArray;
+@property (nonatomic) NSArray * colorsFromTag;
+@property (nonatomic) NSTimer * timer;
 @end
 
 @implementation UserPaletteViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _colorsArray = @[].mutableCopy;
-    _colorsCount = 0;
-}
-
-- (void)setDefaultBackgroundColor {
-    [UIView animateWithDuration:0.1 animations:^{
-        self.paletteView.backgroundColor = UIColor.rsWhite;
-    }];
-}
-
-
-- (IBAction)colorChooseBtnTap:(ColorChooseButton*)sender {
-    // TODO: - choose color and change view bacckground after choose
-    NSArray * colorsFromTag = @[
+//    _colorsArray = @[].mutableCopy;
+    _colorsCount = 3;
+    
+    _colorsArray = [PlistWorker readValueForKey:@"pathColors"];
+    self.colorsFromTag = @[
         @"rsRed",          // 0
         @"rsBlue",         // 1
         @"rsGreen",        // 2
@@ -71,33 +68,71 @@
         @"rsDirtGreen",    // 10
         @"rsBrown"         // 11
     ];
-   
+    
+    for (ColorChoose* container in [self.paletteStackWithStack.subviews.firstObject.subviews
+                                    arrayByAddingObjectsFromArray: self.paletteStackWithStack.subviews.lastObject.subviews]) {
+        ColorChooseButton * btn =  container.subviews.firstObject;
+        
+        if ([_colorsArray containsObject:[_colorsFromTag objectAtIndex:btn.tag]] ) {
+            [btn buttonTapOn];
+            btn.choosed = YES;
+        }
+    }
+    
+}
+
+- (void)setDefaultBackgroundColor {
+    [UIView animateWithDuration:0.1 animations:^{
+        self.paletteView.backgroundColor = UIColor.rsWhite;
+    }];
+}
+
+
+- (IBAction)colorChooseBtnTap:(ColorChooseButton*)sender {
+    // TODO: - choose color and change view bacckground after choose
+    
     if (!sender.choosed && _colorsCount < 3) {
         _colorsCount++;
         [sender buttonTapOn];
         sender.choosed = YES;
-        [UIView animateWithDuration:0.3 animations:^{
+        [UIView animateWithDuration:0.2 animations:^{
             self.paletteView.backgroundColor = sender.backgroundColor;
         }];
-        [NSTimer scheduledTimerWithTimeInterval:1.0
-                                         target:self
-                                       selector:@selector(setDefaultBackgroundColor)
-                                       userInfo:nil
-                                        repeats:NO];
 
-        [_colorsArray addObject: [colorsFromTag objectAtIndex:sender.tag]];
+        [_colorsArray addObject: [_colorsFromTag objectAtIndex:sender.tag]];
         
     } else if (!sender.choosed && _colorsCount == 3) {
+        [sender buttonTapOn];
+        sender.choosed = YES;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.paletteView.backgroundColor = sender.backgroundColor;
+        }];
+        
+        
+        NSString * removedColor = [_colorsArray objectAtIndex:0];
+        [_colorsArray removeObjectAtIndex:0];
+        [_colorsArray addObject: [_colorsFromTag objectAtIndex:sender.tag]];
+        for (ColorChoose* container in [self.paletteStackWithStack.subviews.firstObject.subviews arrayByAddingObjectsFromArray: self.paletteStackWithStack.subviews.lastObject.subviews]) {
+            if (container.subviews.firstObject.tag == [_colorsFromTag indexOfObject:removedColor]) {
+                ColorChooseButton * btn =  container.subviews.firstObject;
+                btn.choosed = NO;
+                [btn buttonTapOff];
+            }
+        }
         
     } else {
         if (_colorsCount > 0) {_colorsCount-- ;}
         [sender buttonTapOff];
-        NSLog(@"btn unchoose");
         sender.choosed = NO;
-        [_colorsArray removeObject:[colorsFromTag objectAtIndex:sender.tag]];
-        NSLog(@"_colorsArray: %@ ", _colorsArray);
+        [_colorsArray removeObject:[_colorsFromTag objectAtIndex:sender.tag]];
     }
-    
+    [self.timer invalidate];
+    self.timer =  nil;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(setDefaultBackgroundColor)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 
@@ -109,22 +144,10 @@
     
     
     [_colorsArray shuffle];
-    NSLog(@"_colorsArray shuffled: %@", _colorsArray);
     [PlistWorker writeValueForKey:@"pathColors" withValue:_colorsArray];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
 
