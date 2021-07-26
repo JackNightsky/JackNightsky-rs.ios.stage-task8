@@ -15,7 +15,7 @@
 @property (nonatomic) CAShapeLayer * layer1;
 @property (nonatomic) CAShapeLayer * layer2;
 @property (nonatomic, nonnull) NSString * currentPicture;
-@property (nonatomic) NSArray * pathColors;
+@property (nonatomic, nonnull) NSArray * pathColors;
 @end
 
 
@@ -30,33 +30,21 @@
 }
 
 -(void)changeStrokeEnd{
-//    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
-//    _pathColors = [PlistWorker readValueForKey:@"pathColors"];
-    
     [_layer0 setStrokeEnd: _progress];
     [_layer1 setStrokeEnd: _progress];
     [_layer2 setStrokeEnd: _progress];
     
-//    NSLog(@"drawDuration from file: %@", [PlistWorker readValueForKey:@"drawDuration"]);
-    NSString* drawDuration = [PlistWorker readValueForKey:@"drawDuration"];
-//    NSLog(@"drawDuration: %f", drawDuration.floatValue / 100);
+    NSString * _Nonnull drawDuration = [PlistWorker readValueForKey:@"drawDuration"];
     float duration = drawDuration.floatValue / 100;
-//    NSLog(@"duration: %f", duration);
-    
     
     if (_progress < 1) {
         _progress += 1 / (duration * 60);
     } else {
         _progress = 1;
-        
     }
-//    NSLog(@"progress = %f", _progress);
 }
 
 -(void)reverseStrokeStart {
-    
-    
-    
     [_layer0 setStrokeEnd: _progress];
     [_layer1 setStrokeEnd: _progress];
     [_layer2 setStrokeEnd: _progress];
@@ -66,16 +54,17 @@
     } else {
         _progress = 0;
     }
-//    NSLog(@"progress = %f", _progress);
 }
 
 
 
 -(void)reset {
     [self commonInit];
-//    _currentPicture = [PlistWorker readValueForKey:@"pictureName"];
-    _pathColors = [PlistWorker readValueForKey:@"pathColors"];
+    // set pathColors before start drawings. All method of set image for drawing call reset method on start.
+    self.pathColors = [PlistWorker readValueForKey:@"pathColors"].copy;
+    
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    
     _layer0 = [CAShapeLayer layer];
     _layer1 = [CAShapeLayer layer];
     _layer2 = [CAShapeLayer layer];
@@ -85,8 +74,6 @@
 
 
 - (void) commonInit {
-//    _progress = 0;
-    
     self.backgroundColor = UIColor.rsWhite;
     self.layer.cornerRadius  = 8;
     self.layer.shadowColor   = UIColor.rsChillSky.CGColor;

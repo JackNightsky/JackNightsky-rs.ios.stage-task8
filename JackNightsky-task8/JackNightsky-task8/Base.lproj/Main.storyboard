@@ -59,7 +59,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-4T-Rrn" customClass="AppRegularButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="163" id="5v0-IV-ogd"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="5v0-IV-ogd"/>
                                                     <constraint firstAttribute="height" constant="32" id="A8p-jp-uff"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
@@ -73,7 +73,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKh-LT-E73" customClass="AppRegularButton">
                                                 <rect key="frame" x="0.0" y="52" width="151" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="151" id="Qzh-nK-Agk"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="Qzh-nK-Agk"/>
                                                     <constraint firstAttribute="height" constant="32" id="qLw-y4-HcS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
@@ -90,7 +90,7 @@
                                         <rect key="frame" x="198.5" y="0.0" width="115.5" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-K8-Zge" customClass="AppRegularButton">
-                                                <rect key="frame" x="66.5" y="0.0" width="49" height="32"/>
+                                                <rect key="frame" x="20.5" y="0.0" width="95" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="qNN-sN-lO1"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="wl9-vK-X0c"/>
@@ -107,7 +107,7 @@
                                                 <rect key="frame" x="20.5" y="52" width="95" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="iAE-uE-veY"/>
-                                                    <constraint firstAttribute="width" constant="95" id="rOd-cD-KA9"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="rOd-cD-KA9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                                 <state key="normal" title="Share">
