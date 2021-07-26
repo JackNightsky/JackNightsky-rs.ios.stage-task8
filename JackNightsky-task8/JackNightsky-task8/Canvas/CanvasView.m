@@ -14,7 +14,7 @@
 @property (nonatomic) CAShapeLayer * layer0;
 @property (nonatomic) CAShapeLayer * layer1;
 @property (nonatomic) CAShapeLayer * layer2;
-@property (nonatomic, nonnull) NSString * currentPicture;
+//@property (nonatomic, nonnull) NSString * currentPicture;
 @property (nonatomic, nonnull) NSArray * pathColors;
 @end
 
@@ -22,7 +22,23 @@
 @implementation CanvasView
 
 -(void)setCurrentPicture:(NSString *)currentPicture {
-    _currentPicture = currentPicture;
+    self.pathColors = [PlistWorker readValueForKey:@"pathColors"].copy;
+    
+    UIColor * color0 = [UIColor colorNamed:[_pathColors objectAtIndex:0]];
+    UIColor * color1 = [UIColor colorNamed:[_pathColors objectAtIndex:1]];
+    UIColor * color2 = [UIColor colorNamed:[_pathColors objectAtIndex:2]];
+
+    if ([currentPicture isEqualToString: @"head"]) {
+          [self drawHead       :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"planet"]) {
+          [self drawPlanet     :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"landscape"]) {
+          [self drawLandscape  :color0 :color1 :color2];
+      } else if ([currentPicture isEqualToString: @"tree"]) {
+          [self drawTree       :color0 :color1 :color2];
+      } else {
+          [self drawHead       :color0 :color1 :color2];
+      }
 }
 
 -(void)resetProgress:(float)progress {
@@ -61,7 +77,7 @@
 -(void)reset {
     [self commonInit];
     // set pathColors before start drawings. All method of set image for drawing call reset method on start.
-    self.pathColors = [PlistWorker readValueForKey:@"pathColors"].copy;
+//    self.pathColors = [PlistWorker readValueForKey:@"pathColors"].copy;
     
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     
@@ -75,10 +91,10 @@
 
 - (void) commonInit {
     self.backgroundColor = UIColor.rsWhite;
-    self.layer.cornerRadius  = 8;
-    self.layer.shadowColor   = UIColor.rsChillSky.CGColor;
+    self.layer.cornerRadius  = 8.;
+    self.layer.shadowColor   = [UIColor.rsChillSky colorWithAlphaComponent:0.25].CGColor;
     self.layer.shadowRadius  = 4;
-    self.layer.shadowOpacity = 0.5;
+    self.layer.shadowOpacity = 1;
     self.layer.shadowOffset  = CGSizeMake(0, 0);
 }
 
@@ -1159,22 +1175,22 @@
 }
 
 
-- (void)drawRect:(CGRect)rect {
-
-    UIColor * color0 = [UIColor colorNamed:[_pathColors objectAtIndex:0]];
-    UIColor * color1 = [UIColor colorNamed:[_pathColors objectAtIndex:1]];
-    UIColor * color2 = [UIColor colorNamed:[_pathColors objectAtIndex:2]];
-    
-    if ([_currentPicture isEqualToString: @"head"]) {
-          [self drawHead       :color0 :color1 :color2];
-      } else if ([_currentPicture isEqualToString: @"planet"]) {
-          [self drawPlanet     :color0 :color1 :color2];
-      } else if ([_currentPicture isEqualToString: @"landscape"]) {
-          [self drawLandscape  :color0 :color1 :color2];
-      } else if ([_currentPicture isEqualToString: @"tree"]) {
-          [self drawTree       :color0 :color1 :color2];
-      }
-}
+//- (void)setDrawing:(NSString*)currentPicture {
+//
+//    UIColor * color0 = [UIColor colorNamed:[_pathColors objectAtIndex:0]];
+//    UIColor * color1 = [UIColor colorNamed:[_pathColors objectAtIndex:1]];
+//    UIColor * color2 = [UIColor colorNamed:[_pathColors objectAtIndex:2]];
+//
+//    if ([currentPicture isEqualToString: @"head"]) {
+//          [self drawHead       :color0 :color1 :color2];
+//      } else if ([currentPicture isEqualToString: @"planet"]) {
+//          [self drawPlanet     :color0 :color1 :color2];
+//      } else if ([currentPicture isEqualToString: @"landscape"]) {
+//          [self drawLandscape  :color0 :color1 :color2];
+//      } else if ([currentPicture isEqualToString: @"tree"]) {
+//          [self drawTree       :color0 :color1 :color2];
+//      }
+//}
 
 
 - (UIImage *) saveAsImage {

@@ -110,10 +110,11 @@
 
 - (IBAction)draw:(AppRegularButton*)sender {
     
-    [self.canvas setCurrentPicture:self.curentPicture];
+    
     
     if ([_drawButton.currentTitle isEqualToString: @"Draw"] && _currentState == idle) {
         [_canvas reset];
+        [self.canvas setCurrentPicture:self.curentPicture];
         [self setCurrentState:draw];
         [self stopTimer];
         
