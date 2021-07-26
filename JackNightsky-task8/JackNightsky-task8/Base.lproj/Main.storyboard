@@ -147,7 +147,7 @@
                             <color key="tintColor" name="rsLightGreenSea"/>
                             <connections>
                                 <action selector="openDrawings:" destination="BYZ-38-t0r" id="Oal-1b-iae"/>
-                                <segue destination="Zxn-G4-FAw" kind="show" destinationCreationSelector="openDrawings" id="lWd-4B-yid"/>
+                                <segue destination="Zxn-G4-FAw" kind="show" id="lWd-4B-yid"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

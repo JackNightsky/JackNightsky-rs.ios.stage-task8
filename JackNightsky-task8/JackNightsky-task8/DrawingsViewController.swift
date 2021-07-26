@@ -72,6 +72,7 @@ class DrawingsViewController: UIViewController {
         PlistWorker.writeValue(forKey: "pictureName", withValue: sender.titleLabel?.text?.lowercased() ?? "head")
         
         delegate?.setDrawingPicture(sender.titleLabel?.text?.lowercased() ?? "head")
+        navigationController?.popViewController(animated: true)
     }
     
     /*
