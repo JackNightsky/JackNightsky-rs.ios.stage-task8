@@ -20,7 +20,7 @@ It was created during RSSchool iOS training course 2021.
 <hr/>
 
 + Full description of requirements [here](https://uvolchyk.notion.site/Task-8-5644a707d93e4915b8e595146f60dadc)
-+ App's desing layout: [here](https://www.figma.com/file/hClSsAvlLDYOcERUZEhgCx/RSSchool_Task8_-2021)
++ App's desing layout [here](https://www.figma.com/file/hClSsAvlLDYOcERUZEhgCx/RSSchool_Task8_-2021)
 
 <hr/>
 
